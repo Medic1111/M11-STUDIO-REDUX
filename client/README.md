@@ -1,5 +1,4 @@
-- FIX CORS OR WHATEVER PREVENTS COOKIE
-  FROM BEING SENT
+- GLITCH MOBILE LOGIN FORM
 - Fix image indetifier in mock data
 - Plan Out New Cart
 - Change Schema to handle quantity

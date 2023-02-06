@@ -2,13 +2,20 @@ import classes from "./AuthForm.module.css";
 import CloseModal from "../../common/CloseModal/CloseModal";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "../../features/auth-slice";
+import { uiActions } from "../../features/ui-slice";
 import { useState } from "react";
-import { authApi } from "../../features/auth-slice";
 import { Slide } from "react-awesome-reveal";
+import {
+  useLoginMutation,
+  useRegisterMutation,
+} from "../../features/api-slice";
 
 const AuthForm = () => {
   const dispatch = useDispatch();
   const authSelector = useSelector((state) => state.auth);
+
+  const [login] = useLoginMutation();
+  const [register] = useRegisterMutation();
 
   const [err, setErr] = useState(false);
   const [errMsg, setErrMsg] = useState("");
@@ -31,8 +38,26 @@ const AuthForm = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    dispatch(authActions.setFormData(formData));
-    dispatch(authApi(setErr, setErrMsg));
+    dispatch(uiActions.setIsLoading(true));
+
+    let url = authSelector.isLoggin
+      ? `/api/v1/auth/login`
+      : `/api/v1/auth/register`;
+
+    let user =
+      url == "/api/v1/auth/login"
+        ? await login(formData)
+        : await register(formData);
+
+    if (!user.error) {
+      dispatch(authActions.auth_in(user.data.user));
+      dispatch(uiActions.closeModal());
+      dispatch(uiActions.setIsLoading(false));
+    } else {
+      setErr(true);
+      setErrMsg(user.error.data.message);
+      dispatch(uiActions.setIsLoading(false));
+    }
   };
   return (
     <Slide className={classes.form} direction="up">

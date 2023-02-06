@@ -13,7 +13,26 @@ export const authApi = createApi({
     logout: builder.query({
       query: () => "/logout",
     }),
+    login: builder.mutation({
+      query: (formData) => ({
+        url: "/login",
+        method: "POST",
+        body: formData,
+      }),
+    }),
+    register: builder.mutation({
+      query: (formData) => ({
+        url: "/register",
+        method: "POST",
+        body: formData,
+      }),
+    }),
   }),
 });
 
-export const { useValidateQuery, useLazyLogoutQuery } = authApi;
+export const {
+  useValidateQuery,
+  useLazyLogoutQuery,
+  useLoginMutation,
+  useRegisterMutation,
+} = authApi;
