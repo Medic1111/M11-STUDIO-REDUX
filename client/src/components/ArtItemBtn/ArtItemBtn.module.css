@@ -29,14 +29,14 @@
 }
 
 /* TEST */
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .btn {
     margin-bottom: 10vh;
     height: 85vw;
   }
   .btn:hover {
-    width: 85vw;
-    height: 20vh;
+    width: 85vw;  
+    height: 20vh; 
     transform: unset;
   }
 }
@@ -45,4 +45,4 @@
   .btn {
     margin-bottom: 10vh;
   }
-}
+} */
