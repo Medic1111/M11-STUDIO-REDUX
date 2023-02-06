@@ -1,0 +1,37 @@
+.section {
+  background-color: #eef1ef;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* ORIGINAL SCROLL BEFORE ADDING PACKAGE */
+
+/* .section {
+  background-color: #eef1ef;
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  flex-wrap: wrap;
+} */
+
+/* TEST BELOW */
+@media (max-width: 1000px) {
+  .section {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: unset;
+    flex-wrap: unset;
+    gap: 5vh;
+    height: auto;
+  }
+}

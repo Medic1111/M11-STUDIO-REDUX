@@ -1,0 +1,11 @@
+- Attempt deploy and investigate issues:
+  - Address issues found FIRST
+- Fix image indetifier in mock data
+- Plan Out New Cart
+- Change Schema to handle quantity
+- Add Month Issued (for future filtering)
+- Add Stock Count (at some point)
+- Create Account page (delete account, change password)
+- Track previous orders (at some point) and show in account page
+- Add PURCHASE date
+- Create a MY COLLECTION on user account

@@ -1,0 +1,189 @@
+.colThree {
+  min-width: 45vw;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: 5vh 2vw;
+}
+.txtBox {
+  padding: 2.5vh 2.5vw;
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+  border-bottom: #7d98a1 solid 1px;
+  border-right: #7d98a1 solid 1px;
+}
+
+.strong {
+  font-size: 1.5em;
+}
+.boxOne {
+  width: 100%;
+  width: 33%;
+  max-width: 100vw;
+  overflow-y: hidden;
+}
+.des {
+  font-size: 1.5em;
+  max-width: 75%;
+  padding: 0 2.5vw;
+  line-height: 1.3;
+}
+.btnBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.price {
+  font-size: 1.8em;
+  color: #7d98a1;
+}
+.id {
+  font-size: 1.2em;
+}
+.icon {
+  color: #7d98a1;
+}
+
+.back {
+  color: tomato;
+  font-size: 1.8em;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.back:hover {
+  color: #7d98a1;
+  transition: 0.25s;
+}
+
+@media (max-width: 1000px) {
+  .colThree {
+    min-width: 45vw;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    /* TEST */
+    height: 100vh;
+    max-width: 100vw;
+    /* TEST */
+    padding: 5vh 2vw;
+  }
+  .price {
+    font-size: 1.5em;
+    max-width: 70%;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+  .colThree {
+    width: 100vw;
+  }
+  .des {
+    max-width: 85%;
+  }
+  .price {
+    font-size: 2.5em;
+  }
+}
+
+/* ORIGINAL CSS */
+/* 
+.colThree {
+  min-width: 45vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: 5vh 2vw;
+}
+.txtBox {
+  padding: 2.5vh 2.5vw;
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+  border-bottom: #7d98a1 solid 1px;
+  border-right: #7d98a1 solid 1px;
+}
+
+.strong {
+  font-size: 1.5em;
+}
+.boxOne {
+  width: 100%;
+  width: 33%;
+  max-width: 100vw;
+  overflow-y: hidden;
+}
+.des {
+  font-size: 1.5em;
+  max-width: 75%;
+  padding: 0 2.5vw;
+  line-height: 1.3;
+}
+.btnBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.price {
+  font-size: 1.8em;
+  color: #7d98a1;
+}
+.id {
+  font-size: 1.2em;
+}
+.icon {
+  color: #7d98a1;
+}
+
+.back {
+  color: tomato;
+  font-size: 1.8em;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.back:hover {
+  color: #7d98a1;
+  transition: 0.25s;
+} */
+
+/* TEST */
+
+@media (max-width: 1000px) {
+  .section {
+    justify-content: flex-start;
+    overflow-y: scroll;
+    overflow-x: unset;
+    flex-wrap: unset;
+  }
+  .colOne {
+    height: unset;
+  }
+  .colTwo {
+    min-width: 50%;
+  }
+  .colTwoAlt {
+    min-width: 100%;
+  }
+  .img {
+    max-width: unset;
+  }
+  .des {
+    max-width: 85%;
+  }
+  .price {
+    font-size: 2.5em;
+  }
+}
