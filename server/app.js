@@ -49,7 +49,7 @@ app.use(
 app.use(mongoSanitize());
 app.use(xss());
 app.use(hpp());
-app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.use(express.static(path.resolve(__dirname, "../client/dist")));
 
 // PERSONAL MIDDLEWARES
 const errController = require("./controllers/errController");
@@ -65,7 +65,7 @@ app.use("/api/v1/user", cartRouter);
 // UNIVERSAL/UNHANDLED ROUTES
 if (process.env.NODE_ENV === "production") {
   app.all("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "../client/build", "index.html"))
+    res.sendFile(path.resolve(__dirname, "../client/dist", "index.html"))
   );
 } else {
   app.all("*", (req, res, next) => {
