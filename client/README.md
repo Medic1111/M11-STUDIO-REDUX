@@ -1,5 +1,4 @@
 - GLITCH MOBILE LOGIN FORM
-- Fix image indetifier in mock data
 - Plan Out New Cart
 - Change Schema to handle quantity
 - Add Month Issued (for future filtering)

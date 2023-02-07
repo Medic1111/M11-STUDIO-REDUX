@@ -16,17 +16,6 @@ const mockProducts = [
     location: "Wynnwood",
     view: "portrait",
   },
-  // {
-  //   title: "Family",
-  //   price: 22289,
-  //   description:
-  //     "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
-  //   url: "https://images.unsplash.com/photo-1580052305579-798aba758a1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-  //   identity: 7,
-  //   artist: "Elias Bezerro",
-  //   location: "North Beach",
-  //   view: "landscape",
-  // },
   {
     title: ".STAR-WAY.",
     price: 11999,
@@ -55,7 +44,7 @@ const mockProducts = [
     description:
       "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
     url: "https://images.unsplash.com/photo-1553685353-8783b52a4750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTYzfHxzdHJlZXQlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-    identity: 4,
+    identity: 3,
     artist: "Edd Dutra",
     location: "North Beach",
     view: "portrait",
@@ -66,7 +55,7 @@ const mockProducts = [
     description:
       "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
     url: "https://images.unsplash.com/photo-1522080406259-930a07a15a67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUzfHxzdHJlZXQlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60",
-    identity: 5,
+    identity: 4,
     artist: "Elias Bezerro",
     location: "North Beach",
     view: "landscape",
@@ -78,7 +67,7 @@ const mockProducts = [
     description:
       "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
     url: "https://images.unsplash.com/photo-1568578728608-3606b14e85fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=957&q=80",
-    identity: 8,
+    identity: 5,
     artist: "Elias Bezerro",
     location: "North Beach",
     view: "portrait",
@@ -89,7 +78,7 @@ const mockProducts = [
     description:
       "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
     url: "https://images.unsplash.com/photo-1548457782-67c976e1e7be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    identity: 7,
+    identity: 8,
     artist: "Elias Bezerro",
     location: "North Beach",
     view: "landscape",
@@ -100,7 +89,7 @@ const mockProducts = [
     description:
       "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
     url: "https://images.unsplash.com/photo-1572280935179-bad2474e2646?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxzdHJlZXQlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-    identity: 3,
+    identity: 6,
     artist: "Lindor Fauwn",
     location: "Las olas",
     view: "portrait",
@@ -111,7 +100,7 @@ const mockProducts = [
     description:
       "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
     url: "https://images.unsplash.com/photo-1580214686817-877a60a021bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-    identity: 9,
+    identity: 7,
     artist: "Elias Bezerro",
     location: "North Beach",
     view: "portrait",
