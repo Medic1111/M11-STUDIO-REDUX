@@ -8,7 +8,9 @@ const { confirmation } = require("../assets/email");
 const addControl = handleAsync(async (req, res, next) => {
   let user = await User.findByIdAndUpdate(
     { _id: req.params.user_id },
-    { $push: { cart: req.body.product } },
+    {
+      $push: { cart: { item: req.body.product, quantity: req.body.quantity } },
+    },
     { new: true, runValidators: true }
   );
 
@@ -18,7 +20,9 @@ const addControl = handleAsync(async (req, res, next) => {
 const patchControl = handleAsync(async (req, res, next) => {
   let user = await User.findByIdAndUpdate(
     { _id: req.params.user_id },
-    { $pull: { cart: req.body.product } },
+    {
+      $pull: { cart: { item: req.body.product, quantity: req.body.quantity } },
+    },
     { new: true, runValidators: true }
   );
 
@@ -27,6 +31,10 @@ const patchControl = handleAsync(async (req, res, next) => {
 
 const checkoutControl = handleAsync(async (req, res, next) => {
   const { amount, id, shippingInfo } = req.body;
+
+  // TAKE CART AS BODY
+  // PUSH ALONG WITH TRANSACTIONS
+  // TO KEEP TRACK OF PAST ORDERS
 
   const payment = await stripe.paymentIntents.create({
     amount: amount * 100,
@@ -47,7 +55,6 @@ const checkoutControl = handleAsync(async (req, res, next) => {
   await sendEmail({
     email: user.email,
     subject: "m-11 Thank you for your purchase",
-    // message: "This is the message",
     message: confirmation(payment.id),
   });
 

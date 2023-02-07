@@ -58,12 +58,31 @@ const productSchema = new mongoose.Schema(
       maxLength: [200, "View must be at most 200 chars long"],
       default: "portrait",
     },
+    stock: {
+      type: Number,
+      required: [true, "A product requires stock count"],
+      min: [0, "Stock cannot be negative"],
+      default: 0,
+    },
+    issue: {
+      type: String,
+      required: [
+        true,
+        "Submit the issue month corresponding to this art piece",
+      ],
+      minLength: [3, "May is the shortest month of the year"],
+      maxLength: [9, "September is the longest month of the year"],
+      trim: true,
+      select: false,
+    },
   },
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
   }
 );
+
+// ADD METHOD FOR STOCK COUNT
 
 const Product = mongoose.model("Product", productSchema);
 

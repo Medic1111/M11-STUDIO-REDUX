@@ -15,6 +15,8 @@ const mockProducts = [
     artist: "Milley School",
     location: "Wynnwood",
     view: "portrait",
+    stock: 16,
+    issue: "february",
   },
   {
     title: ".STAR-WAY.",
@@ -26,6 +28,8 @@ const mockProducts = [
     artist: "D'Azevedo",
     location: "Wynnwood",
     view: "portrait",
+    stock: 4,
+    issue: "february",
   },
   {
     title: ".HEROES-MEET.",
@@ -37,6 +41,8 @@ const mockProducts = [
     artist: "Mil Armstrong",
     location: "Las olas",
     view: "landscape",
+    stock: 2,
+    issue: "february",
   },
   {
     title: ".LHAMA.",
@@ -48,6 +54,8 @@ const mockProducts = [
     artist: "Edd Dutra",
     location: "North Beach",
     view: "portrait",
+    stock: 17,
+    issue: "february",
   },
   {
     title: ".DAY-FACE.",
@@ -59,8 +67,9 @@ const mockProducts = [
     artist: "Elias Bezerro",
     location: "North Beach",
     view: "landscape",
+    stock: 14,
+    issue: "february",
   },
-  // TEST
   {
     title: ".DEEP-JAM.",
     price: 6722,
@@ -71,18 +80,10 @@ const mockProducts = [
     artist: "Elias Bezerro",
     location: "North Beach",
     view: "portrait",
+    stock: 8,
+    issue: "february",
   },
-  {
-    title: ".ALIVE.",
-    price: 22289,
-    description:
-      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
-    url: "https://images.unsplash.com/photo-1548457782-67c976e1e7be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    identity: 8,
-    artist: "Elias Bezerro",
-    location: "North Beach",
-    view: "landscape",
-  },
+
   {
     title: ".OHM.",
     price: 12389,
@@ -93,6 +94,8 @@ const mockProducts = [
     artist: "Lindor Fauwn",
     location: "Las olas",
     view: "portrait",
+    stock: 9,
+    issue: "february",
   },
   {
     title: ".ZÖE.",
@@ -104,6 +107,21 @@ const mockProducts = [
     artist: "Elias Bezerro",
     location: "North Beach",
     view: "portrait",
+    stock: 2,
+    issue: "february",
+  },
+  {
+    title: ".ALIVE.",
+    price: 22289,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1548457782-67c976e1e7be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    identity: 8,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "landscape",
+    stock: 3,
+    issue: "february",
   },
 ];
 
