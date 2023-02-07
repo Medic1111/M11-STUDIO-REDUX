@@ -58,7 +58,7 @@ const userSchema = new mongoose.Schema(
         quantity: {
           type: Number,
           default: 1,
-          min: [1, "At least one product must be in the cart"],
+          min: [0, "At least one product must be in the cart"],
         },
         item: {
           type: mongoose.Schema.ObjectId,

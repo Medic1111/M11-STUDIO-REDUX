@@ -4,7 +4,6 @@ const { Product } = require("../models/products");
 
 const getControl = handleAsync(async (req, res, next) => {
   let products = await Product.find().sort({ identity: 1 });
-  console.log(products);
   res.status(200).json(products);
 });
 

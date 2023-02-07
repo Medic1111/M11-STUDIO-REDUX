@@ -82,8 +82,6 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-// ADD METHOD FOR STOCK COUNT
-
 const Product = mongoose.model("Product", productSchema);
 
 module.exports = { Product };

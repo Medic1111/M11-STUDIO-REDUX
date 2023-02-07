@@ -2,9 +2,11 @@ import classes from "./ArtDetailThree.module.css";
 import ArtItemBtn from "../ArtItemBtn/ArtItemBtn";
 import CloseModal from "../../common/CloseModal/CloseModal";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 const ArtDetailThree = () => {
   const uiSelector = useSelector((state) => state.ui);
+  const [stockCount, setStockCount] = useState(uiSelector.selectedArt.stock);
   return (
     <div className={classes.colThree}>
       <div className={classes.txtBox}>
@@ -23,14 +25,24 @@ const ArtDetailThree = () => {
           <p className={classes.p}>Offering a 5 year warranty on all issues</p>
         </div>
       </div>
-      <p className={classes.des}>{uiSelector.selectedArt.description}</p>
+      <p className={classes.des}>
+        {uiSelector.selectedArt.description} <br />
+        <span className={classes.stock}>
+          {" "}
+          stock:{" "}
+          {uiSelector.selectedArt.stock <= 0 ? "out of stock" : stockCount}{" "}
+        </span>
+      </p>
+
       <div className={classes.btnBox}>
         <CloseModal className={classes.back} text={"BACK"} />
         <ArtItemBtn
           content={uiSelector.selectedArt.price}
           index={uiSelector.selectedArt.identity}
           id={uiSelector.selectedArt.id}
-        />
+          setStockCount={setStockCount}
+          stockCount={stockCount}
+        />{" "}
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ const validate = require("../utils/validate");
 cartRouter
   .route("/:user_id/cart")
   .post(validate, cartControl.addControl)
+  .put(validate, cartControl.putControl)
   .patch(validate, cartControl.patchControl);
 
 cartRouter
