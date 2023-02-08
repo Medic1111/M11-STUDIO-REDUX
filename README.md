@@ -32,9 +32,9 @@ Full stack app, with security taken into account:
 
 Payments processed with Stripe
 
-Email integration with twilio's sendgrid and nodemailer
+Email notification integration with twilio's sendgrid and nodemailer
 
-GoDaddy Registry for domain
+State management with React-Redux and Redux-Toolkit
 
 ## Compromises:
 
@@ -43,7 +43,7 @@ GoDaddy Registry for domain
 ## Tech Stack
 
 - Frontend
-  - React
+  - React/ VITE
   - CSS
 - Backend
   - NodeJS
@@ -52,14 +52,16 @@ GoDaddy Registry for domain
   - MongoDB: mongoose applied
 - Deployment
   - Render.io
-- Domain
-  - GoDaddy
+- Extras
+  - Stripe
+  - Nodemailer
+  - Twilio's Sendgrid
+  - React Redux
+  - Redux Toolkit
 
 ## What's next
 
-- Loading Spinner
 - Feedback for item added to cart
-- Focus on mobile UI
 - Pagination and filtering
 
 ## Running it
