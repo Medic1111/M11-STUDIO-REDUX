@@ -1,6 +1,9 @@
 import classes from "./CartTotal.module.css";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../features/ui-slice";
 
 const CartTotal = ({ cart }) => {
+  const dispatch = useDispatch();
   return (
     <p className={classes.pTotal}>
       {cart.reduce((acc, obj) => {
@@ -12,7 +15,7 @@ const CartTotal = ({ cart }) => {
       {cart.length > 0 && (
         <span
           className={classes.span}
-          // onClick={() => uiMgr.dispatch({ type: "CHECKOUT" })}
+          onClick={() => dispatch(uiActions.setShowCheckout())}
         >
           check out
         </span>

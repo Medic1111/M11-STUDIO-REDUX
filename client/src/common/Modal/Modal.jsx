@@ -1,6 +1,6 @@
 import ArtDetail from "../../pages/ArtDetail/ArtDetail";
 import Auth from "../../components/Auth/Auth";
-// import Checkout from "../../components/Checkout/Checkout";
+import Checkout from "../../components/Checkout/Checkout";
 import Cart from "../../components/Cart/Cart";
 import Portal from "../../portal/Portal";
 import { useSelector } from "react-redux";
@@ -12,7 +12,7 @@ const Modal = () => {
       {uiSelector.showArtDetail && <ArtDetail />}
       {uiSelector.showAuth && <Auth />}
       {uiSelector.showCart && <Cart />}
-      {/* {uiMgr.state.showCheckout && <Checkout />}  */}
+      {uiSelector.showCheckout && <Checkout />}
     </Portal>
   );
 };

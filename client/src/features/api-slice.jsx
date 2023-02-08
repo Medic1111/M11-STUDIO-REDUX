@@ -58,6 +58,13 @@ export const cartApi = createApi({
         body: { product: args.itemId },
       }),
     }),
+    checkout: builder.mutation({
+      query: (args) => ({
+        url: `/${args.userId}/cart/checkout`,
+        method: "POST",
+        body: { id: args.id, amount: args.amount },
+      }),
+    }),
   }),
 });
 
@@ -72,4 +79,5 @@ export const {
   useRemoveFromCartMutation,
   useIncreaseQtyMutation,
   useDecreaseQtyMutation,
+  useCheckoutMutation,
 } = cartApi;
