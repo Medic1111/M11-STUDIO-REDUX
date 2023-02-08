@@ -1,5 +1,4 @@
 import classes from "./CartItem.module.css";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "../../features/auth-slice";
 import { uiActions } from "../../features/ui-slice";

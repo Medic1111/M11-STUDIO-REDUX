@@ -1,5 +1,4 @@
 import classes from "./Cart.module.css";
-import { useContext } from "react";
 import AnimBanner from "../../common/AnimBanner/AnimBanner";
 import CartPlaceholder from "../CartPlaceholder/CartPlaceholder";
 import CartTotal from "../CartTotal/CartTotal";
@@ -10,7 +9,6 @@ import { useSelector } from "react-redux";
 
 const Cart = () => {
   const cart = useSelector((state) => state.auth.currentUser.cart);
-  console.log(cart);
   return (
     <>
       <AnimBanner />

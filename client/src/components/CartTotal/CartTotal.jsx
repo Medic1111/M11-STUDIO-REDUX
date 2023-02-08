@@ -8,7 +8,6 @@ const CartTotal = ({ cart }) => {
   return (
     <p className={classes.pTotal}>
       {cart.reduce((acc, obj) => {
-        console.log(obj);
         {
           return acc + obj.item.price * obj.quantity;
         }
