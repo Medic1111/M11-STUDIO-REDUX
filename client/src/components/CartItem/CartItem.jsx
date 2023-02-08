@@ -49,13 +49,26 @@ const CartItem = ({ obj, quantity }) => {
         <p className={classes.pDes}>{obj.description}</p>
         <p className={classes.pArtist}>- {obj.artist}</p>
         <p className={classes.pPrice}>${obj.price}</p>
-        <p>
-          qty: {quantity} <span onClick={() => increaseQty(obj.id)}>🔼</span>{" "}
-          <span onClick={() => decreaseQty(obj.id)}>🔽</span>
-        </p>
-        <p className={classes.pRemove} onClick={() => removeHandler(obj.id)}>
-          remove
-        </p>
+        <div className={classes.crud}>
+          <p className={classes.qty}>
+            qty: {quantity}
+            <span
+              onClick={() => increaseQty(obj.id)}
+              className={`${classes.icon} material-symbols-outlined`}
+            >
+              arrow_upward
+            </span>
+            <span
+              onClick={() => decreaseQty(obj.id)}
+              className={`${classes.icon} material-symbols-outlined`}
+            >
+              arrow_downward
+            </span>
+          </p>
+          <p className={classes.pRemove} onClick={() => removeHandler(obj.id)}>
+            remove
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 - GLITCH MOBILE LOGIN FORM
-- Plan Out New Cart
-- Create Account page (delete account, change password)
+- Submit form with enter PRESS bug fix
 - Track previous orders (at some point) and show in account page
 - Add PURCHASE date
+- Create Account page (delete account, change password)
 - Create a MY COLLECTION on user account

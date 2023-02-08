@@ -11,8 +11,8 @@ import { useValidateQuery } from "./features/api-slice";
 import { authActions } from "./features/auth-slice";
 
 function App() {
-  const uiSelector = useSelector((state) => state.ui);
   const dispatch = useDispatch();
+  const uiSelector = useSelector((state) => state.ui);
   const { data, error } = useValidateQuery();
 
   useEffect(() => {
