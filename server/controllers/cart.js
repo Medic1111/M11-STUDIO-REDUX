@@ -42,9 +42,9 @@ const addControl = handleAsync(async (req, res, next) => {
       { cart: user.cart },
       { new: true, runValidators: true }
     );
-    res.status(200).json(updateUser);
+    return res.status(200).json(updateUser);
   } else if (alreadyInCart.item.stock < 0) {
-    res.status(500).json({ message: "Out of stock" });
+    return res.status(500).json({ message: "Out of stock" });
   }
 });
 
@@ -66,7 +66,7 @@ const patchControl = handleAsync(async (req, res, next) => {
       { new: true, runValidators: true }
     );
 
-    res.status(200).json(user);
+    return res.status(200).json(user);
   }
 
   product.quantity--;
@@ -94,7 +94,7 @@ const putControl = handleAsync(async (req, res, next) => {
     { $inc: { stock: req.body.quantity } }
   );
 
-  res.status(200).json(user);
+  return res.status(200).json(user);
 });
 
 const checkoutControl = handleAsync(async (req, res, next) => {

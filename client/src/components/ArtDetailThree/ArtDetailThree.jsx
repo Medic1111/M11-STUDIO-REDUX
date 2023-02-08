@@ -39,7 +39,7 @@ const ArtDetailThree = () => {
         <ArtItemBtn
           content={uiSelector.selectedArt.price}
           index={uiSelector.selectedArt.identity}
-          id={uiSelector.selectedArt.id}
+          itemId={uiSelector.selectedArt.id}
           setStockCount={setStockCount}
           stockCount={stockCount}
         />{" "}
