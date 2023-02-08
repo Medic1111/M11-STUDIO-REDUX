@@ -47,54 +47,11 @@
   font-size: 1.8em;
 }
 .pPrice {
-  /* align-self: flex-end; */
   font-size: 4em;
   color: #a9b4c2;
 }
 
-.crud {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.pRemove {
-  border-bottom: #1c2321 solid 1px;
-  /* align-self: flex-end; */
-}
-.qty {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.3em;
-}
-.icon {
-  font-size: 1.3em;
-  cursor: pointer;
-  font-weight: 700;
-}
-.pRemove:hover {
-  border-bottom: tomato solid 1px;
-  color: tomato;
-  cursor: pointer;
-}
-@media (min-width: 600px) {
-  .qty {
-    width: 15%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.3em;
-  }
-}
-
 @media (min-width: 900px) {
-  .qty {
-    width: 15%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.3em;
-  }
   .card {
     flex-direction: row;
     gap: unset;
@@ -113,12 +70,6 @@
     margin-right: 8.5vw;
   }
 
-  .pRemove {
-    border-bottom: #1c2321 solid 1px;
-    /* align-self: flex-end; */
-    margin-right: 8.5vw;
-    font-size: 1.3em;
-  }
   .pTitle {
     font-size: 6em;
   }
