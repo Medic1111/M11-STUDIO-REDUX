@@ -41,7 +41,7 @@ const ArtDetailThree = () => {
           index={uiSelector.selectedArt.identity}
           itemId={uiSelector.selectedArt.id}
           setStockCount={setStockCount}
-          stockCount={stockCount}
+          stock={stockCount}
         />{" "}
       </div>
     </div>

@@ -7,9 +7,6 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 const ArtItem = ({ obj, index }) => {
-  // TEST:
-
-  // const [stockCount, setStockCount] = useState(obj.stockCount);
   const uiSelector = useSelector((state) => state.ui);
   const [stockCount, setStockCount] = useState(uiSelector.selectedArt.stock);
 
@@ -23,9 +20,7 @@ const ArtItem = ({ obj, index }) => {
           index={index}
           itemId={obj.id}
           setStockCount={setStockCount}
-          // TEST
-          // stockCount={stockCount}
-          stock={obj.stock}
+          stock={stockCount}
         />
       </Slide>
     </ArtItemWrapper>
