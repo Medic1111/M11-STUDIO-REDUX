@@ -20,7 +20,6 @@ const ArtItemImg = ({ index, obj }) => {
           dispatch(uiActions.setSelectedArt(obj));
           dispatch(uiActions.setShowArtDetail(true));
         }}
-        // className={index % 2 ? classes.img2 : classes.img1}
         className={
           randomOrder
             ? index % 2

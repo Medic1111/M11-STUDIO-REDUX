@@ -11,7 +11,6 @@ const registerControl = handleAsync(async (req, res, next) => {
   await sendEmail({
     email: req.body.email,
     subject: "Welcome from m-11!",
-    // message: "<h1>This is the message</h1>",
     message: welcome,
   })
     .then(async () => {

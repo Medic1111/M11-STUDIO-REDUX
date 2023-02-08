@@ -22,9 +22,47 @@ export const authApi = createApi({
     }),
     register: builder.mutation({
       query: (formData) => ({
-        url: "/register",
+        url: "/auth/register",
         method: "POST",
         body: formData,
+      }),
+    }),
+  }),
+});
+
+export const cartApi = createApi({
+  reducerPath: "CART_API",
+  baseQuery: fetchBaseQuery({
+    baseUrl: "http://localhost:3002/api/v1/user",
+    credentials: "include",
+  }),
+  endpoints: (builder) => ({
+    removeFromCart: builder.mutation({
+      query: (args) => ({
+        url: `/${args.userId}/cart`,
+        method: "PUT",
+        body: { product: args.itemId, quantity: args.quantity },
+      }),
+    }),
+    increaseQty: builder.mutation({
+      query: (args) => ({
+        url: `/${args.userId}/cart`,
+        method: "POST",
+        body: { product: args.itemId },
+      }),
+    }),
+    decreaseQty: builder.mutation({
+      query: (args) => ({
+        url: `/${args.userId}/cart`,
+        method: "PATCH",
+        body: { product: args.itemId },
+      }),
+    }),
+    checkout: builder.mutation({
+      query: (args) => ({
+        url: `/${args.userId}/cart/checkout`,
+        method: "POST",
+        body: { id: args.id, amount: args.amount },
       }),
     }),
   }),
@@ -36,3 +74,10 @@ export const {
   useLoginMutation,
   useRegisterMutation,
 } = authApi;
+
+export const {
+  useRemoveFromCartMutation,
+  useIncreaseQtyMutation,
+  useDecreaseQtyMutation,
+  useCheckoutMutation,
+} = cartApi;

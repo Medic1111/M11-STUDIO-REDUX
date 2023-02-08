@@ -44,7 +44,7 @@ const SideNav = () => {
             </li>
             <li>
               <span
-                // onClick={() => uiMgr.dispatch({ type: "CART" })}
+                onClick={() => dispatch(uiActions.setShowCart(true))}
                 style={{ fontSize: "5em" }}
                 className={`${classes.li} material-symbols-outlined`}
               >

@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import axios from "axios";
 
 const useProducts = () => {
   const [products, setProducts] = useState([]);
-
+  const cart = useSelector((state) => state.auth.currentUser.cart);
   const fetchProducts = async () => {
     await axios
       .get("/api/v1/products")
@@ -15,7 +16,7 @@ const useProducts = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [cart]);
 
   return products;
 };

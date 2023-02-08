@@ -61,6 +61,10 @@
   color: #7d98a1;
   transition: 0.25s;
 }
+.stock {
+  color: tomato;
+  color: #7d98a1;
+}
 
 @media (max-width: 1000px) {
   .colThree {

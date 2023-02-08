@@ -1,23 +1,26 @@
 import classes from "./ArtItemBtn.module.css";
-import { useContext, useState } from "react";
-import axios from "axios";
-// import { authCtx } from "../../features/auth-ctx";
-// import { uiCtx } from "../../features/ui-ctx";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { authActions } from "../../features/auth-slice";
+import { uiActions } from "../../features/ui-slice";
+import { useIncreaseQtyMutation } from "../../features/api-slice";
 
-const ArtItemBtn = ({ content, index, id }) => {
-  // const authMgr = useContext(authCtx);
-  // const uiMgr = useContext(uiCtx);
-
+const ArtItemBtn = ({ content, index, itemId, setStockCount, stock }) => {
+  const dispatch = useDispatch();
+  const [increase] = useIncreaseQtyMutation();
+  const userId = useSelector((state) => state.auth.currentUser._id);
+  const isAuth = useSelector((state) => state.auth.isAuth);
   const [showAdd, setShowAdd] = useState(false);
 
   const handleAdd = async () => {
-    // if (!authMgr.isAuth) return uiMgr.dispatch({ type: "AUTH" });
-    // await axios
-    //   .post(`/api/v1/user/${authMgr.currentUser.id}/cart`, { product: id })
-    //   .then((serverRes) => {
-    //     authMgr.setCurrentUser(serverRes.data);
-    //   })
-    //   .catch((err) => console.log(err));
+    if (!isAuth) return dispatch(uiActions.setShowAuth(true));
+    if (stock < 1) return;
+    let args = { userId, itemId };
+    let response = await increase(args);
+    if (!response.error) {
+      setStockCount((prev) => prev - 1);
+      return dispatch(authActions.setCurrentUser(response.data));
+    }
   };
 
   return (

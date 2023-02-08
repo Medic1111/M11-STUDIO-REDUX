@@ -46,11 +46,25 @@ const userSchema = new mongoose.Schema(
       default: null,
       select: false,
     },
+    // cart: [
+    //   {
+    //     type: mongoose.Schema.ObjectId,
+    //     ref: "Product",
+    //     require: [true, "A cart needs a product"],
+    //   },
+    // ],
     cart: [
       {
-        type: mongoose.Schema.ObjectId,
-        ref: "Product",
-        require: [true, "A cart needs a product"],
+        quantity: {
+          type: Number,
+          default: 1,
+          min: [0, "At least one product must be in the cart"],
+        },
+        item: {
+          type: mongoose.Schema.ObjectId,
+          ref: "Product",
+          require: [true, "A cart needs a product"],
+        },
       },
     ],
     transactions: {
@@ -64,9 +78,21 @@ const userSchema = new mongoose.Schema(
     toObject: { virtuals: true },
   }
 );
+
+// CREATE VIRTUAL FOR CART TOTAL ITEMS
+// CREATE VIRTUAL FOR CART TOTAL AMOUNT
+
+// userSchema.pre(/^find/, async function (next) {
+//   this.populate({
+//     path: "cart",
+//     select: "-__v",
+//   });
+//   next();
+// });
+
 userSchema.pre(/^find/, async function (next) {
   this.populate({
-    path: "cart",
+    path: "cart.item",
     select: "-__v",
   });
   next();
