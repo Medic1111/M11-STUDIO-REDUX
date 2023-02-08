@@ -29,7 +29,7 @@ const addControl = handleAsync(async (req, res, next) => {
     return res.status(200).json(updateUser);
   }
 
-  if (alreadyInCart.item.stock >= 0) {
+  if (alreadyInCart.item.stock >= 1) {
     alreadyInCart.quantity++;
 
     await Product.findByIdAndUpdate(

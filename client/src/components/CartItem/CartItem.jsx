@@ -3,44 +3,44 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "../../features/auth-slice";
 import { uiActions } from "../../features/ui-slice";
+import {
+  useDecreaseQtyMutation,
+  useIncreaseQtyMutation,
+  useRemoveFromCartMutation,
+} from "../../features/api-slice";
 
 const CartItem = ({ obj, quantity }) => {
   const dispatch = useDispatch();
   const userId = useSelector((state) => state.auth.currentUser._id);
   const isAuth = useSelector((state) => state.auth.isAuth);
 
+  const [remove] = useRemoveFromCartMutation();
+  const [increase] = useIncreaseQtyMutation();
+  const [decrease] = useDecreaseQtyMutation();
+
   const removeHandler = async (itemId) => {
     if (!isAuth) return dispatch(uiActions.setShowAuth(true));
-    await axios
-      .put(`/api/v1/user/${userId}/cart`, { product: itemId, quantity })
-      .then((serverRes) => {
-        dispatch(authActions.setCurrentUser(serverRes.data));
-      })
-      .catch((err) => console.log(err));
+    let args = { userId, itemId, quantity };
+    let response = await remove(args);
+    if (!response.error)
+      return dispatch(authActions.setCurrentUser(response.data));
   };
 
   const increaseQty = async (itemId) => {
     if (!isAuth) return dispatch(uiActions.setShowAuth(true));
     if (obj.stock < 1) return;
-
-    await axios
-      .post(`/api/v1/user/${userId}/cart`, {
-        product: itemId,
-      })
-      .then((serverRes) => {
-        dispatch(authActions.setCurrentUser(serverRes.data));
-      })
-      .catch((err) => console.log(err));
+    let args = { userId, itemId };
+    let response = await increase(args);
+    if (!response.error)
+      return dispatch(authActions.setCurrentUser(response.data));
   };
 
   const decreaseQty = async (itemId) => {
     if (!isAuth) return dispatch(uiActions.setShowAuth(true));
-    await axios
-      .patch(`/api/v1/user/${userId}/cart`, { product: itemId })
-      .then((serverRes) => {
-        dispatch(authActions.setCurrentUser(serverRes.data));
-      })
-      .catch((err) => console.log(err));
+    let args = { userId, itemId };
+    let response = await decrease(args);
+    if (!response.error)
+      return dispatch(authActions.setCurrentUser(response.data));
   };
   return (
     <div className={classes.card}>
