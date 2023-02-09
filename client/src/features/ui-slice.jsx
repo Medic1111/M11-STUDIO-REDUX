@@ -7,7 +7,20 @@ const uiInitialState = {
   showModal: false,
   showCheckout: false,
   showArtDetail: false,
+  showOtherExpo: false,
   selectedArt: {},
+  showPrevious: false,
+  showSpoiler: false,
+  issueToShow: new Date()
+    .toLocaleString("default", {
+      month: "long",
+    })
+    .toLowerCase(),
+  issue: new Date()
+    .toLocaleString("default", {
+      month: "long",
+    })
+    .toLowerCase(),
 };
 
 export const uiSlice = createSlice({
@@ -20,6 +33,16 @@ export const uiSlice = createSlice({
 
     setIsLoading: (state, action) => {
       state.isLoading = action.payload;
+    },
+    setShowPrevious: (state, action) => {
+      state.showPrevious = true;
+    },
+    setShowSpoiler: (state, action) => {
+      state.showSpoiler = true;
+    },
+    setShowOtherExpo: (state, action) => {
+      state.showModal = true;
+      state.showOtherExpo = action.payload;
     },
 
     setShowAuth: (state, action) => {
@@ -44,6 +67,9 @@ export const uiSlice = createSlice({
 
     setSelectedArt: (state, action) => {
       state.selectedArt = action.payload;
+    },
+    setIssueToShow: (state, action) => {
+      state.issueToShow = action.payload;
     },
   },
 });

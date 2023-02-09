@@ -1,0 +1,12 @@
+.img {
+  min-height: 90vh;
+  height: 90vh;
+  padding: 2em;
+  border: solid tomato 1em;
+  border-radius: 20px 0 0 0;
+}
+.li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

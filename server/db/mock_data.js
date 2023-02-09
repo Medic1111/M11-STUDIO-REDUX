@@ -5,6 +5,76 @@ const id = mongoose.Types.ObjectId();
 const postid = "fill this with user id from compass";
 
 const mockProducts = [
+  //  JANUARY
+  {
+    title: ".TWEET-KIWI.",
+    price: 19873,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1616532157866-dd0c68bf37e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHN0cmVldCUyMGFydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=2000&q=60",
+    identity: 0,
+    artist: "Milley School",
+    location: "Wynnwood",
+    view: "landscape",
+    stock: 7,
+    issue: "january",
+  },
+  {
+    title: ".LIT.",
+    price: 9894,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1533157726070-bc55faa2a9cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHN0cmVldCUyMGFydHxlbnwwfDF8MHx8&auto=format&fit=crop&w=2000&q=60",
+    identity: 1,
+    artist: "Milley School",
+    location: "Wynnwood",
+    view: "portrait",
+    stock: 7,
+    issue: "january",
+  },
+
+  {
+    title: ".BANANA.",
+    price: 23897,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1615484398670-d04028664303?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTl8fHN0cmVldCUyMGFydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=2000&q=60",
+    identity: 2,
+    artist: "Milley School",
+    location: "Wynnwood",
+    view: "landscape",
+    stock: 3,
+    issue: "january",
+  },
+  {
+    title: ".ZOMBIE.",
+    price: 9894,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1572886264704-f2d75d989199?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fHN0cmVldCUyMGFydHxlbnwwfDF8MHx8&auto=format&fit=crop&w=2000&q=60",
+    identity: 4,
+    artist: "Milley School",
+    location: "Wynnwood",
+    view: "portrait",
+    stock: 3,
+    issue: "january",
+  },
+
+  {
+    title: ".DIE-A-BETES.",
+    price: 23897,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1603792992315-8dee3ea765b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHN0cmVldCUyMGFydHxlbnwwfDB8MHx8&auto=format&fit=crop&w=2000&q=60",
+    identity: 5,
+    artist: "Milley School",
+    location: "Wynnwood",
+    view: "landscape",
+    stock: 3,
+    issue: "january",
+  },
+
+  // FEBRUARY
   {
     title: ".FUN-ALLEY.",
     price: 9999,
@@ -122,6 +192,73 @@ const mockProducts = [
     view: "landscape",
     stock: 3,
     issue: "february",
+  },
+  // MARCH
+  {
+    title: ".ROAM.",
+    price: 15183,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1563204800-6434a22e842f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHdhbGwlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60",
+    identity: 0,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "portrait",
+    stock: 6,
+    issue: "march",
+  },
+  {
+    title: ".MEMORY.",
+    price: 4291,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1571596825787-640e72bbb2f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHdhbGwlMjBhcnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    identity: 1,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "landscape",
+    stock: 12,
+    issue: "march",
+  },
+  {
+    title: ".153.",
+    price: 9123,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1585436249848-3a8210d46a47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fHdhbGwlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60",
+    identity: 2,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "portrait",
+    stock: 6,
+    issue: "march",
+  },
+  {
+    title: ".MUERTO-VIVO.",
+    price: 4291,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1573298256586-be921484f4f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fHdhbGwlMjBhcnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    identity: 3,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "landscape",
+    stock: 5,
+    issue: "march",
+  },
+
+  {
+    title: ".WONDERLAND.",
+    price: 4291,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1588534876368-6f3d9362d349?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHdhbGwlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60",
+    identity: 4,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "portrait",
+    stock: 3,
+    issue: "march",
   },
 ];
 

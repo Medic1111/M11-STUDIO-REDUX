@@ -1,12 +1,13 @@
 import classes from "./ArtItemImg.module.css";
 import { Slide } from "react-awesome-reveal";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../features/ui-slice";
 import { useMediaQuery } from "react-responsive";
 
 const ArtItemImg = ({ index, obj }) => {
   const dispatch = useDispatch();
   const randomOrder = useMediaQuery({ query: "(min-width:1000px)" });
+  const { issue, issueToShow } = useSelector((state) => state.ui);
 
   return (
     <Slide
@@ -17,12 +18,13 @@ const ArtItemImg = ({ index, obj }) => {
       <img
         alt="street/wall art"
         onClick={() => {
+          if (issue !== issueToShow) return;
           dispatch(uiActions.setSelectedArt(obj));
           dispatch(uiActions.setShowArtDetail(true));
         }}
         className={
           randomOrder
-            ? index % 2
+            ? obj.view === "landscape"
               ? classes.img2
               : classes.img1
             : classes.mobileImg

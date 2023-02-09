@@ -1,0 +1,10 @@
+.ul {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5vw;
+  padding: 0 5vw;
+  background: url("../../assets/asfalt-dark.png");
+}
