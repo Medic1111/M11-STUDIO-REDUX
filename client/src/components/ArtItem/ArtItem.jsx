@@ -9,19 +9,22 @@ import { useSelector } from "react-redux";
 const ArtItem = ({ obj, index }) => {
   const uiSelector = useSelector((state) => state.ui);
   const [stockCount, setStockCount] = useState(uiSelector.selectedArt.stock);
+  const { issue, issueToShow } = useSelector((state) => state.ui);
 
   return (
     <ArtItemWrapper>
       <ArtItemImg index={index} obj={obj} />
       <Slide direction={index % 2 ? "left" : "right"}>
         <ArtItemDes description={obj.description} index={index} />
-        <ArtItemBtn
-          content={obj.price}
-          index={index}
-          itemId={obj.id}
-          setStockCount={setStockCount}
-          stock={stockCount}
-        />
+        {issue !== issueToShow || (
+          <ArtItemBtn
+            content={obj.price}
+            index={index}
+            itemId={obj.id}
+            setStockCount={setStockCount}
+            stock={stockCount}
+          />
+        )}
       </Slide>
     </ArtItemWrapper>
   );

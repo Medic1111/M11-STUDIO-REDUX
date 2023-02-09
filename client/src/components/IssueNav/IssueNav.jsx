@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
 import classes from "./IssueNav.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../features/ui-slice";
 
 const IssueNav = () => {
