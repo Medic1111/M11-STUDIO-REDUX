@@ -5,6 +5,9 @@ const id = mongoose.Types.ObjectId();
 const postid = "fill this with user id from compass";
 
 const mockProducts = [
+  // DECEMBER
+  // JANUARY
+  // FEBRUARY
   {
     title: ".FUN-ALLEY.",
     price: 9999,
@@ -123,6 +126,79 @@ const mockProducts = [
     stock: 3,
     issue: "february",
   },
+  // MARCH
+  {
+    title: ".ROAM.",
+    price: 15183,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1563204800-6434a22e842f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHdhbGwlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60",
+    identity: 0,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "portrait",
+    stock: 6,
+    issue: "march",
+  },
+  {
+    title: ".MEMORY.",
+    price: 4291,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1571596825787-640e72bbb2f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHdhbGwlMjBhcnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    identity: 1,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "landscape",
+    stock: 12,
+    issue: "march",
+  },
+  {
+    title: ".153.",
+    price: 9123,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1585436249848-3a8210d46a47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fHdhbGwlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60",
+    identity: 2,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "portrait",
+    stock: 6,
+    issue: "march",
+  },
+  {
+    title: ".MUERTO-VIVO.",
+    price: 4291,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1573298256586-be921484f4f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fHdhbGwlMjBhcnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    identity: 3,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "landscape",
+    stock: 5,
+    issue: "march",
+  },
+
+  {
+    title: ".WONDERLAND.",
+    price: 4291,
+    description:
+      "An intricate and elaborate resolution of impactful concepts. A total abstratiction that makes perfect sense.",
+    url: "https://images.unsplash.com/photo-1588534876368-6f3d9362d349?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHdhbGwlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60",
+    identity: 4,
+    artist: "Elias Bezerro",
+    location: "North Beach",
+    view: "portrait",
+    stock: 3,
+    issue: "march",
+  },
+
+  // CAT
+  // https://images.unsplash.com/photo-1517776832751-0a7e6993de03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHdhbGwlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60
+  // ROYALTY
+  // https://images.unsplash.com/photo-1585436249848-3a8210d46a47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fHdhbGwlMjBhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60
+  // APRIL
 ];
 
 const mockUsers = [

@@ -5,9 +5,10 @@ import axios from "axios";
 const useProducts = () => {
   const [products, setProducts] = useState([]);
   const cart = useSelector((state) => state.auth.currentUser.cart);
+  const issue = useSelector((state) => state.ui.issue);
   const fetchProducts = async () => {
     await axios
-      .get("/api/v1/products")
+      .get(`/api/v1/products?issue=${issue}`)
       .then((serverRes) => {
         setProducts(serverRes.data);
       })

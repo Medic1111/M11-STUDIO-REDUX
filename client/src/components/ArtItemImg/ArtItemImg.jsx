@@ -22,7 +22,7 @@ const ArtItemImg = ({ index, obj }) => {
         }}
         className={
           randomOrder
-            ? index % 2
+            ? obj.view === "landscape"
               ? classes.img2
               : classes.img1
             : classes.mobileImg

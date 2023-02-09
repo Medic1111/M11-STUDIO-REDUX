@@ -1,2 +1,10 @@
 - GLITCH MOBILE LOGIN FORM
+- Add products for more months issues
+- Add query to products controllers
+- Store current month show in banner hero, as a state. Fetch Products with that month as query for standard
+- Add clickable options for previous issues
+- SERVER
+  - Reset Password
+  - Change password
+  - Delete account
 - Create Account page (delete account, change password, past orders, my collection)
