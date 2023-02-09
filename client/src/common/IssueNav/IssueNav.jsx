@@ -26,31 +26,35 @@ const IssueNav = () => {
       <ul className={classes.ul}>
         <li
           className={classes.li}
-          onClick={() =>
+          onClick={() => {
+            dispatch(uiActions.setShowOtherExpo(true));
+            dispatch(uiActions.setShowPrevious(true));
             dispatch(
               uiActions.setIssueToShow(months[months.indexOf(issue) - 1])
-            )
-          }
+            );
+          }}
         >
-          previous
+          previous-expo
         </li>
-        <li
+        {/* <li
           className={classes.li}
           onClick={() =>
             dispatch(uiActions.setIssueToShow(months[months.indexOf(issue)]))
           }
         >
           current
-        </li>
+        </li> */}
         <li
           className={classes.li}
-          onClick={() =>
+          onClick={() => {
+            dispatch(uiActions.setShowOtherExpo(true));
+            dispatch(uiActions.setShowSpoiler(true));
             dispatch(
               uiActions.setIssueToShow(months[months.indexOf(issue) + 1])
-            )
-          }
+            );
+          }}
         >
-          spoiler
+          spoiler-expo
         </li>
       </ul>
     </nav>

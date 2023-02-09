@@ -1,6 +1,6 @@
 import Header from "../../common/Header/Header";
 import ArtList from "../../components/ArtList/ArtList";
-import IssueNav from "../../components/IssueNav/IssueNav";
+import IssueNav from "../../common/IssueNav/IssueNav";
 import ShowroomWrapper from "../../components/ShowroomWrapper/ShowroomWrapper";
 
 const Showroom = () => {
