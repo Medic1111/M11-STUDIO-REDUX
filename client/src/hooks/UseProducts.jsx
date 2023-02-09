@@ -7,7 +7,9 @@ const useProducts = () => {
   const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.auth.currentUser.cart);
-  const issueToShow = useSelector((state) => state.ui.issueToShow);
+  const { issueToShow, showSpoiler, showPrevious } = useSelector(
+    (state) => state.ui
+  );
 
   const fetchProducts = async () => {
     dispatch(uiActions.setIsLoading(true));
@@ -22,7 +24,7 @@ const useProducts = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, [cart, issueToShow]);
+  }, [cart, issueToShow, showSpoiler, showPrevious]);
 
   return products;
 };
