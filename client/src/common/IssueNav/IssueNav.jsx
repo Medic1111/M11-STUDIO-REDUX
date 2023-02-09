@@ -1,25 +1,11 @@
 import classes from "./IssueNav.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../features/ui-slice";
+import { months } from "../../assets/months";
 
 const IssueNav = () => {
   const dispatch = useDispatch();
   const issue = useSelector((state) => state.ui.issue);
-
-  const months = [
-    "january",
-    "february",
-    "march",
-    "april",
-    "may",
-    "june",
-    "july",
-    "august",
-    "september",
-    "october",
-    "november",
-    "december",
-  ];
 
   return (
     <nav className={classes.nav}>
@@ -36,14 +22,6 @@ const IssueNav = () => {
         >
           previous-expo
         </li>
-        {/* <li
-          className={classes.li}
-          onClick={() =>
-            dispatch(uiActions.setIssueToShow(months[months.indexOf(issue)]))
-          }
-        >
-          current
-        </li> */}
         <li
           className={classes.li}
           onClick={() => {
