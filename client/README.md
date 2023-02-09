@@ -1,8 +1,5 @@
 - GLITCH MOBILE LOGIN FORM
-- Add products for more months issues
-- Add query to products controllers
-- Store current month show in banner hero, as a state. Fetch Products with that month as query for standard
-- Add clickable options for previous issues
+- IF A USER KEEPS ITEMS IN CART WITHOUT CHECKING OUT, ITEM CAN BE OUT OF STOCK. FIX BY CLEARING CART AT SOME POINT
 - SERVER
   - Reset Password
   - Change password
