@@ -47,6 +47,7 @@
 }
 .submit {
   background-color: #1c2321;
+  order: 1;
 }
 
 .btnBox {

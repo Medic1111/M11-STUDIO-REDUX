@@ -1,5 +1,4 @@
 - GLITCH MOBILE LOGIN FORM
-- Submit form with enter PRESS bug fix
 - Track previous orders (at some point) and show in account page
 - Add PURCHASE date
 - Create Account page (delete account, change password)
