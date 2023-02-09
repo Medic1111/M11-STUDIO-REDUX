@@ -62,7 +62,7 @@ export const cartApi = createApi({
       query: (args) => ({
         url: `/${args.userId}/cart/checkout`,
         method: "POST",
-        body: { id: args.id, amount: args.amount },
+        body: { id: args.id, amount: args.amount, cart: args.cart },
       }),
     }),
   }),

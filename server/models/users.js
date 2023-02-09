@@ -46,13 +46,6 @@ const userSchema = new mongoose.Schema(
       default: null,
       select: false,
     },
-    // cart: [
-    //   {
-    //     type: mongoose.Schema.ObjectId,
-    //     ref: "Product",
-    //     require: [true, "A cart needs a product"],
-    //   },
-    // ],
     cart: [
       {
         quantity: {
