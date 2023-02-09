@@ -5,10 +5,10 @@ import axios from "axios";
 const useProducts = () => {
   const [products, setProducts] = useState([]);
   const cart = useSelector((state) => state.auth.currentUser.cart);
-  const issue = useSelector((state) => state.ui.issue);
+  const issueToShow = useSelector((state) => state.ui.issueToShow);
   const fetchProducts = async () => {
     await axios
-      .get(`/api/v1/products?issue=${issue}`)
+      .get(`/api/v1/products?issue=${issueToShow}`)
       .then((serverRes) => {
         setProducts(serverRes.data);
       })
@@ -17,7 +17,7 @@ const useProducts = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, [cart]);
+  }, [cart, issueToShow]);
 
   return products;
 };

@@ -8,6 +8,11 @@ const uiInitialState = {
   showCheckout: false,
   showArtDetail: false,
   selectedArt: {},
+  issueToShow: new Date()
+    .toLocaleString("default", {
+      month: "long",
+    })
+    .toLowerCase(),
   issue: new Date()
     .toLocaleString("default", {
       month: "long",
@@ -50,8 +55,8 @@ export const uiSlice = createSlice({
     setSelectedArt: (state, action) => {
       state.selectedArt = action.payload;
     },
-    setIssue: (state, action) => {
-      state.issue = action.payload;
+    setIssueToShow: (state, action) => {
+      state.issueToShow = action.payload;
     },
   },
 });
