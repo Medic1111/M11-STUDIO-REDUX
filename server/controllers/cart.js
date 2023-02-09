@@ -100,10 +100,6 @@ const putControl = handleAsync(async (req, res, next) => {
 const checkoutControl = handleAsync(async (req, res, next) => {
   const { amount, id, shippingInfo } = req.body;
 
-  // TAKE CART AS BODY
-  // PUSH ALONG WITH TRANSACTIONS
-  // TO KEEP TRACK OF PAST ORDERS
-
   const payment = await stripe.paymentIntents.create({
     amount: amount * 100,
     currency: "USD",
@@ -116,7 +112,16 @@ const checkoutControl = handleAsync(async (req, res, next) => {
 
   let user = await User.findByIdAndUpdate(
     { _id: req.params.user_id },
-    { cart: [], $push: { transactions: payment.id } },
+    {
+      cart: [],
+      $push: {
+        transactions: {
+          payId: payment.id,
+          cart: req.body.cart,
+          purchase_date: new Date().toISOString(),
+        },
+      },
+    },
     { new: true, runValidators: true }
   );
 

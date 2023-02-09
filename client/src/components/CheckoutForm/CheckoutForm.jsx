@@ -35,6 +35,7 @@ const CheckoutForm = ({ setShowConfirm }) => {
             return acc + obj.item.price * obj.quantity;
           }
         }, 0),
+        cart,
       };
 
       let transaction = await checkout(args);

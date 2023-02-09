@@ -61,7 +61,7 @@ const AuthForm = () => {
   };
   return (
     <Slide className={classes.form} direction="up">
-      <form onSubmit={submitHandler} className={classes.form}>
+      <form onSubmit={(e) => submitHandler(e)} className={classes.form}>
         <p className={classes.title}>
           {authSelector.isLoggin ? "Login" : "Register"}
         </p>
@@ -102,8 +102,8 @@ const AuthForm = () => {
           />
         )}
         <div className={classes.btnBox}>
-          <CloseModal text={"BACK"} className={classes.back} />
           <input className={classes.submit} type={"submit"} />
+          <CloseModal text={"BACK"} className={classes.back} />
         </div>
         <p
           className={classes.p}
