@@ -24,15 +24,6 @@ app.use(helmet.dnsPrefetchControl());
 app.use(helmet.expectCt());
 app.use(helmet.originAgentCluster());
 app.use(helmet.referrerPolicy());
-// config for image reading outta self-src
-// app.use(
-//   helmet.contentSecurityPolicy({
-//     useDefaults: true,
-//     directives: {
-//       "img-src": ["'self'", "https: data:"],
-//     },
-//   })
-// );
 
 const limiter = rateLimit({
   max: 100,
@@ -45,11 +36,13 @@ app.use(express.json({ limit: "10kb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://m11-n5ne.onrender.com",
-      "http://localhost:4173",
-    ],
+    // origin: [
+    //   "http://localhost:5173",
+    //   "https://m11-n5ne.onrender.com",
+    //   "http://localhost:4173",
+    // ],
+    origin: "http://localhost:4173",
+
     // origin: "https://m11-n5ne.onrender.com",
     credentials: true,
     methods: ["GET", "POST", "PATCH", "DELETE", "PUT"],
