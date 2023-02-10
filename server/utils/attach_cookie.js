@@ -7,7 +7,7 @@ const attachCookie = (req, res, next) => {
     secure: true,
     httpOnly: true,
     // TEST
-    SameSite: "None",
+    sameSite: "None",
   });
   next();
 };
