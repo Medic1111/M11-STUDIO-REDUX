@@ -5,7 +5,6 @@ export const authApi = createApi({
   baseQuery: fetchBaseQuery({
     // baseUrl: "http://localhost:3002/api/v1/auth",
     baseUrl: "https://m11-n5ne.onrender.com/api/v1/auth",
-
     credentials: "include",
   }),
   endpoints: (builder) => ({
@@ -37,7 +36,6 @@ export const cartApi = createApi({
   baseQuery: fetchBaseQuery({
     // baseUrl: "http://localhost:3002/api/v1/user",
     baseUrl: "https://m11-n5ne.onrender.com/api/v1/user",
-
     credentials: "include",
   }),
   endpoints: (builder) => ({
