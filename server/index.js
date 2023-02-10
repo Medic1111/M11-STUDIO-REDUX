@@ -16,6 +16,8 @@ mongoose
 
 const PORT = (process.env.NODE_ENV = "development" ? 3002 : process.env.PORT);
 
+console.log(PORT);
+
 const server = app.listen(PORT, (err) =>
   err ? console.log(err) : console.log("SERVER SPINNING")
 );
