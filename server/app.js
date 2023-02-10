@@ -41,9 +41,8 @@ app.use(
     //   "https://m11-n5ne.onrender.com",
     //   "http://localhost:4173",
     // ],
-    origin: "http://localhost:4173",
 
-    // origin: "https://m11-n5ne.onrender.com",
+    origin: "https://m11-n5ne.onrender.com",
     credentials: true,
     methods: ["GET", "POST", "PATCH", "DELETE", "PUT"],
   })
