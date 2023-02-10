@@ -10,14 +10,3 @@
   justify-content: flex-start;
   align-items: center;
 }
-@media (max-width: 1000px) {
-  .img {
-    width: 100%;
-    height: auto;
-  }
-  .li {
-    justify-content: center;
-    height: inherit;
-    width: inherit;
-  }
-}

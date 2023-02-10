@@ -6,12 +6,4 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  z-index: 999999999999;
-}
-
-@media (max-width: 1000px) {
-  .section {
-    flex-direction: column;
-    height: auto;
-  }
 }
