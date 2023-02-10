@@ -22,7 +22,7 @@ export const authApi = createApi({
     }),
     register: builder.mutation({
       query: (formData) => ({
-        url: "/auth/register",
+        url: "/register",
         method: "POST",
         body: formData,
       }),
