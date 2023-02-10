@@ -59,6 +59,7 @@
 .popUpTxt2 {
   font-size: 6em;
   text-align: center;
+  font-size: 5em;
 }
 
 .detailBox {
@@ -76,6 +77,7 @@
 .detail {
   font-size: 10em;
   color: #7d98a1;
+  font-size: 8.7em;
 }
 
 @media (min-width: 900px) {
