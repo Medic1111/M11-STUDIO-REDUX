@@ -1,10 +1,9 @@
 .txtBox {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
   background: url("../../assets/asfalt-dark.png");
 }
 
@@ -17,9 +16,12 @@
   color: tomato;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .txt,
   .txt2 {
     font-size: 5em;
+  }
+  .txtBox {
+    height: 100vh;
   }
 }
