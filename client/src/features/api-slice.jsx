@@ -3,8 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const authApi = createApi({
   reducerPath: "AUTH_API",
   baseQuery: fetchBaseQuery({
-    // baseUrl: "http://localhost:3002/api/v1/auth",
-    baseUrl: "https://m11-n5ne.onrender.com/api/v1/auth",
+    baseUrl: "/api/v1/auth",
+    // baseUrl: "https://m11-n5ne.onrender.com/api/v1/auth",
     credentials: "include",
   }),
   endpoints: (builder) => ({
@@ -34,8 +34,8 @@ export const authApi = createApi({
 export const cartApi = createApi({
   reducerPath: "CART_API",
   baseQuery: fetchBaseQuery({
-    // baseUrl: "http://localhost:3002/api/v1/user",
-    baseUrl: "https://m11-n5ne.onrender.com/api/v1/user",
+    baseUrl: "/api/v1/user",
+    // baseUrl: "https://m11-n5ne.onrender.com/api/v1/user",
     credentials: "include",
   }),
   endpoints: (builder) => ({
