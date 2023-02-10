@@ -41,6 +41,7 @@ app.use(
       "http://localhost:5173",
       "https://m11-n5ne.onrender.com",
       "http://localhost:4173",
+      "https://merchant-ui-api.stripe.com/",
     ],
     // THIS BELOW WORKS PERFECT PROD
     // origin: "https://m11-n5ne.onrender.com",
