@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 const Cart = () => {
   const cart = useSelector((state) => state.auth.currentUser.cart);
+
   return (
     <>
       <AnimBanner />

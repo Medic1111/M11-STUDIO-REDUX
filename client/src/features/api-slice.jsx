@@ -27,6 +27,23 @@ export const authApi = createApi({
         body: formData,
       }),
     }),
+    delete: builder.mutation({
+      query: (args) => ({
+        url: `/account/${args.userId}`,
+        method: "DELETE",
+        body: { password: args.password },
+      }),
+    }),
+    changePassword: builder.mutation({
+      query: (args) => ({
+        url: `/password/new/${args.userId}`,
+        method: "PATCH",
+        body: {
+          currentPassword: args.currentPassword,
+          newPassword: args.newPassword,
+        },
+      }),
+    }),
   }),
 });
 
@@ -79,6 +96,8 @@ export const {
   useLazyLogoutQuery,
   useLoginMutation,
   useRegisterMutation,
+  useDeleteMutation,
+  useChangePasswordMutation,
 } = authApi;
 
 export const {

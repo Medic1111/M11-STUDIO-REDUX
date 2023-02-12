@@ -23,4 +23,8 @@
     width: 100%;
     order: 2;
   }
+  .pOrder {
+    font-weight: 500;
+    font-size: 1.5em;
+  }
 }

@@ -5,6 +5,7 @@ const sendEmail = require("../utils/send_email");
 const jwt = require("jsonwebtoken");
 const { welcome } = require("../assets/email");
 
+// REGISTER
 const registerControl = handleAsync(async (req, res, next) => {
   let user = await User.create(req.body);
 
@@ -23,6 +24,7 @@ const registerControl = handleAsync(async (req, res, next) => {
     });
 });
 
+// LOGIN
 const loginControl = handleAsync(async (req, res, next) => {
   if (!req.body.username || !req.body.password)
     return next(new AppError("Username and password required", 400));
@@ -39,6 +41,7 @@ const loginControl = handleAsync(async (req, res, next) => {
   res.status(200).json({ user, token: "development_only" });
 });
 
+// VALIDATE
 const validateControl = handleAsync(async (req, res, next) => {
   let token = req.cookies.jwt || req.headers.authorization.slice(7);
 
@@ -50,6 +53,7 @@ const validateControl = handleAsync(async (req, res, next) => {
   });
 });
 
+// LOGOUT
 const logoutControl = (req, res) => {
   res.cookie("jwt", "loggedout", {
     maxAge: 100,
@@ -59,11 +63,49 @@ const logoutControl = (req, res) => {
   res.status(200).json({ message: "Loggout out" });
 };
 
+// DELETE ACCOUNT
+const deleteUserControl = handleAsync(async (req, res, next) => {
+  const user = await User.findById({ _id: req.params.user_id }).select(
+    "+password"
+  );
+
+  if (!user || !(await user.decrypt(req.body.password, user.password))) {
+    return next(new AppError("Incorrect Password", 401));
+  }
+  // send goodbye email
+  await User.findByIdAndDelete({ _id: req.params.user_id })
+    .then(() => {
+      res.status(200).json({ message: "User Account Deleted" });
+    })
+    .catch((err) => console.log(err));
+});
+
+// VOLUNTARY CHANGE PASSWORD
+
+const changePassControl = handleAsync(async (req, res, next) => {
+  const user = await User.findById({ _id: req.params.user_id }).select(
+    "+password"
+  );
+
+  if (!user || !(await user.decrypt(req.body.currentPassword, user.password))) {
+    return next(new AppError("Incorrect Password", 401));
+  }
+  user.password = req.body.newPassword;
+  user.change_password_time = new Date().toISOString();
+
+  await user
+    .save()
+    .then(() => res.status(200).json({ message: "Password Changed" }))
+    .catch((err) => console.log(err));
+});
+
 const authControl = {
   registerControl,
   loginControl,
   validateControl,
   logoutControl,
+  changePassControl,
+  deleteUserControl,
 };
 
 module.exports = { authControl };
