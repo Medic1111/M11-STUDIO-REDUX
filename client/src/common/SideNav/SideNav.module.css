@@ -2,6 +2,8 @@
   position: fixed;
   right: 0;
   top: 20vh;
+  top: 15vh;
+
   z-index: 9999;
   color: #a9b4c2;
 }
@@ -24,5 +26,6 @@
 @media (min-width: 640px) {
   .nav {
     top: 47.5vh;
+    top: 45vh;
   }
 }

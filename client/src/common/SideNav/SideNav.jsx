@@ -44,6 +44,15 @@ const SideNav = () => {
             </li>
             <li>
               <span
+                onClick={() => dispatch(uiActions.setShowAccount(true))}
+                style={{ fontSize: "5em" }}
+                className={`${classes.li} material-symbols-outlined`}
+              >
+                account_circle
+              </span>
+            </li>
+            <li>
+              <span
                 onClick={() => dispatch(uiActions.setShowCart(true))}
                 style={{ fontSize: "5em" }}
                 className={`${classes.li} material-symbols-outlined`}

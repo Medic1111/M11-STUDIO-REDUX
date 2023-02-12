@@ -1,5 +1,5 @@
 .article {
-  min-height: 100%;
+  /* min-height: 100%; */
   height: auto;
   width: 100%;
   background-color: #eef1ef;
@@ -10,4 +10,5 @@
   align-items: flex-start;
   padding: 5vh 5vw;
   gap: 5vh;
+  min-height: 100%;
 }

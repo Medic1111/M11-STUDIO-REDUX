@@ -12,4 +12,7 @@ cartRouter
   .route("/:user_id/cart/checkout")
   .post(validate, cartControl.checkoutControl);
 
+cartRouter
+  .route("/:user_id/orders")
+  .get(validate, cartControl.getOrdersControl);
 module.exports = cartRouter;

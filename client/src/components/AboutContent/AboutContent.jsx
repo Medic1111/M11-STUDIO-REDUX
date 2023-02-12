@@ -28,13 +28,14 @@ const AboutContent = () => {
         <div className={classes.popUp}>
           <strong className={classes.popUpTxt2}>MONTHLY-EXPOS</strong>
           <p className={classes.des}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus
-            viverra vitae congue eu consequat ac. Mattis nunc sed blandit libero
-            volutpat sed cras ornare arcu. Bibendum neque egestas congue quisque
-            egestas. Hac habitasse platea dictumst quisque sagittis purus. Proin
-            nibh nisl condimentum id. Adipiscing bibendum est ultricies integer
-            quis auctor elit.
+            Our online street art gallery shop showcases the work of some of the
+            most talented street artists from around the world. From
+            eye-catching murals to thought-provoking pieces, our collection has
+            something for everyone. Each piece in our shop is carefully curated
+            and chosen for its unique style, quality, and message. Whether
+            you're a long-time street art aficionado or just discovering the
+            genre, our shop is the perfect place to explore, find inspiration,
+            and purchase amazing works of art to add to your own collection.
           </p>
         </div>
         <div className={classes.detailBox}>
