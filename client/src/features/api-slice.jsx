@@ -36,6 +36,7 @@ export const cartApi = createApi({
     baseUrl: "/api/v1/user",
     credentials: "include",
   }),
+  tagTypes: ["Orders"],
   endpoints: (builder) => ({
     removeFromCart: builder.mutation({
       query: (args) => ({
@@ -64,6 +65,11 @@ export const cartApi = createApi({
         method: "POST",
         body: { id: args.id, amount: args.amount, cart: args.cart },
       }),
+      invalidatesTags: ["Orders"],
+    }),
+    getOrders: builder.query({
+      query: (args) => `/${args.userId}/orders`,
+      providesTags: ["Orders"],
     }),
   }),
 });
@@ -80,4 +86,5 @@ export const {
   useIncreaseQtyMutation,
   useDecreaseQtyMutation,
   useCheckoutMutation,
+  useGetOrdersQuery,
 } = cartApi;

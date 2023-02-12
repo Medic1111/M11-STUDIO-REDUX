@@ -5,6 +5,7 @@ import Cart from "../../components/Cart/Cart";
 import Portal from "../../portal/Portal";
 import { useSelector } from "react-redux";
 import OtherExpo from "../../components/OtherExpo/OtherExpo";
+import Account from "../../components/Account/Account";
 
 const Modal = () => {
   const uiSelector = useSelector((state) => state.ui);
@@ -15,6 +16,7 @@ const Modal = () => {
       {uiSelector.showCart && <Cart />}
       {uiSelector.showCheckout && <Checkout />}
       {uiSelector.showOtherExpo && <OtherExpo />}
+      {uiSelector.showAccount && <Account />}
     </Portal>
   );
 };

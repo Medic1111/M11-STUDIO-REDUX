@@ -8,6 +8,7 @@ const uiInitialState = {
   showCheckout: false,
   showArtDetail: false,
   showOtherExpo: false,
+  showAccount: false,
   selectedArt: {},
   showPrevious: false,
   showSpoiler: false,
@@ -44,6 +45,10 @@ export const uiSlice = createSlice({
       state.showModal = true;
       state.showOtherExpo = action.payload;
     },
+    setShowAccount: (state, action) => {
+      state.showModal = true;
+      state.showAccount = action.payload;
+    },
 
     setShowAuth: (state, action) => {
       state.showModal = true;
@@ -56,7 +61,7 @@ export const uiSlice = createSlice({
     },
 
     setShowCheckout: (state, action) => {
-      state.showModal = true;
+      state.showCart = false;
       state.showCheckout = true;
     },
 

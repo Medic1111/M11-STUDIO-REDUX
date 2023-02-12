@@ -1,7 +1,11 @@
+- Change password form
+- Delete account form
+- costumer service something
 - GLITCH MOBILE LOGIN FORM
+- GLITCH MOBILE CHECKOUT FORM
+- OTHER EXPO LEFT OVER ON THE RIGHT
 - IF A USER KEEPS ITEMS IN CART WITHOUT CHECKING OUT, ITEM CAN BE OUT OF STOCK. FIX BY CLEARING CART AT SOME POINT
 - SERVER
   - Reset Password
   - Change password
   - Delete account
-- Create Account page (delete account, change password, past orders, my collection)

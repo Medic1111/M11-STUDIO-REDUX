@@ -72,17 +72,6 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-// CREATE VIRTUAL FOR CART TOTAL ITEMS
-// CREATE VIRTUAL FOR CART TOTAL AMOUNT
-
-// userSchema.pre(/^find/, async function (next) {
-//   this.populate({
-//     path: "cart",
-//     select: "-__v",
-//   });
-//   next();
-// });
-
 userSchema.pre(/^find/, async function (next) {
   this.populate({
     path: "cart.item",

@@ -1,5 +1,4 @@
 import classes from "./OtherExpo.module.css";
-import HorizontalScroll from "react-scroll-horizontal";
 import OtherExpoTxt from "../OtherExpoTxt/OtherExpoTxt";
 import OtherExpoReturn from "../OtherExpoReturn/OtherExpoReturn";
 import OtherExpoList from "../OtherExpoList/OtherExpoList";

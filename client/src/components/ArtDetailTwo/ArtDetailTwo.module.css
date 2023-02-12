@@ -51,30 +51,15 @@
   .colTwo,
   .colTwoAlt {
     min-width: 50%;
-    /* width: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100vw;
     padding: 2em;
+    height: auto;
   }
   .img {
-    /* max-height: 90vh;
-    max-height: unset;
-    padding: 2em;
-    border: solid tomato 1em;
-    border-radius: 25px 0 0 0;
-    max-width: 90%; */
     width: 100%;
-  }
-  /* TEST END!!!! */
-  /* .colTwo {
-    min-width: 50%;
-  }
-  .colTwoAlt {
-    min-width: 100%;
-  } */
-  .img {
     max-width: unset;
   }
 }

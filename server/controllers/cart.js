@@ -134,11 +134,20 @@ const checkoutControl = handleAsync(async (req, res, next) => {
   res.status(200).json(user);
 });
 
+const getOrdersControl = handleAsync(async (req, res, next) => {
+  let user = await User.findById({ _id: req.params.user_id }).select(
+    "+transactions"
+  );
+  if (!user) return next(new AppError("No user found with that id", 404));
+  res.status(200).json(user);
+});
+
 const cartControl = {
   addControl,
   patchControl,
   putControl,
   checkoutControl,
+  getOrdersControl,
 };
 
 module.exports = cartControl;

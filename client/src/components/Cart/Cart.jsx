@@ -1,4 +1,3 @@
-import classes from "./Cart.module.css";
 import AnimBanner from "../../common/AnimBanner/AnimBanner";
 import CartPlaceholder from "../CartPlaceholder/CartPlaceholder";
 import CartTotal from "../CartTotal/CartTotal";
@@ -14,7 +13,7 @@ const Cart = () => {
       <AnimBanner />
       <CartWrapper>
         <CartList cart={cart} />
-        {cart.length <= 0 && <CartPlaceholder classes={classes} />}
+        {cart.length <= 0 && <CartPlaceholder />}
         <CartTotal cart={cart} />
         <CartReturn />
       </CartWrapper>
