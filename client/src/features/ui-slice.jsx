@@ -12,6 +12,9 @@ const uiInitialState = {
   selectedArt: {},
   showPrevious: false,
   showSpoiler: false,
+  showChangePassword: false,
+  showDeleteAccount: false,
+  showSupport: false,
   issueToShow: new Date()
     .toLocaleString("default", {
       month: "long",
@@ -23,6 +26,8 @@ const uiInitialState = {
     })
     .toLowerCase(),
 };
+
+// RERENDER:
 
 export const uiSlice = createSlice({
   name: "UI_SLICE",
@@ -75,6 +80,21 @@ export const uiSlice = createSlice({
     },
     setIssueToShow: (state, action) => {
       state.issueToShow = action.payload;
+    },
+    setShowDeleteAccount: (state, action) => {
+      state.showSupport = false;
+      state.showChangePassword = false;
+      state.showDeleteAccount = true;
+    },
+    setShowChangePassword: (state, action) => {
+      state.showSupport = false;
+      state.showDeleteAccount = false;
+      state.showChangePassword = true;
+    },
+    setShowSupport: (state) => {
+      state.showDeleteAccount = false;
+      state.showChangePassword = false;
+      state.showSupport = true;
     },
   },
 });

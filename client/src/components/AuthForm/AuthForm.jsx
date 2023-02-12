@@ -116,6 +116,9 @@ const AuthForm = () => {
             : "Already have an account? Login"}
         </p>
         {err && <p className={classes.err}>{errMsg}</p>}
+        {authSelector.isLoggin && (
+          <p className={classes.err}>forgot password</p>
+        )}
       </form>
     </Slide>
   );

@@ -7,5 +7,11 @@ authRouter.route("/login").post(attachCookie, authControl.loginControl);
 authRouter.route("/register").post(attachCookie, authControl.registerControl);
 authRouter.route("/logout").get(authControl.logoutControl);
 authRouter.route("/validate").get(validate, authControl.validateControl);
+authRouter
+  .route("/password/new/:user_id")
+  .patch(validate, authControl.changePassControl);
+authRouter
+  .route("/account/:user_id")
+  .delete(validate, authControl.deleteUserControl);
 
 module.exports = authRouter;

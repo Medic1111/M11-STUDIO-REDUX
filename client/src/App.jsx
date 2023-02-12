@@ -9,6 +9,7 @@ import Showroom from "./pages/Showroom/Showroom";
 import { useDispatch, useSelector } from "react-redux";
 import { useValidateQuery } from "./features/api-slice";
 import { authActions } from "./features/auth-slice";
+import { uiActions } from "./features/ui-slice";
 
 function App() {
   const dispatch = useDispatch();
@@ -16,9 +17,12 @@ function App() {
   const { data, error } = useValidateQuery();
 
   useEffect(() => {
-    if (error) return dispatch(authActions.logout());
+    if (error) {
+      dispatch(uiActions.closeModal());
+      return dispatch(authActions.logout());
+    }
     data && dispatch(authActions.auth_in(data.user));
-  }, [data]);
+  }, [data, error, dispatch]);
 
   return (
     <React.Fragment>
