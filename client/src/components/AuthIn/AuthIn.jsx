@@ -115,9 +115,9 @@ const AuthIn = ({ setShowForgot }) => {
       </p>
       {err && <p className={classes.err}>{errMsg}</p>}
       {authSelector.isLoggin && (
-        <p onClick={() => setShowForgot(true)} className={classes.err}>
+        <button onClick={() => setShowForgot(true)} className={classes.submit2}>
           forgot password
-        </p>
+        </button>
       )}
     </form>
   );
