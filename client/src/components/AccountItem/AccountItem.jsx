@@ -13,6 +13,7 @@ const AccountItem = ({ purchase_date, cart, payId }) => {
               <p>item: {obj.item.title}</p>
               <p>cost: {obj.item.price}</p>
               <p>qty: {obj.quantity}</p>
+              <img className={classes.itemImg} src={obj.item.url} />
             </li>
           );
         })}

@@ -7,6 +7,7 @@
   border-right: solid #7d98a1 1px;
   padding: 0 2em;
   overflow-y: scroll;
+  max-width: 35%;
 }
 .pOrder {
   height: 5vh;
@@ -22,6 +23,7 @@
   .orders {
     width: 100%;
     order: 2;
+    max-width: unset;
   }
   .pOrder {
     font-weight: 500;
