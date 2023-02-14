@@ -1,9 +1,3 @@
-- SERVER
-  - Reset Password
-- CLIENT
-
-  - Reset Password Form and Confirmation
-
 - costumer service something
   <!--  -->
 - GLITCH MOBILE LOGIN FORM

@@ -18,7 +18,8 @@
 }
 .input,
 .back,
-.submit {
+.submit,
+.submit2 {
   min-height: 5vh;
   width: 100%;
   border: none;
@@ -40,12 +41,13 @@
 }
 
 .back,
-.submit {
+.submit .submit2 {
   text-transform: uppercase;
   border-bottom: unset;
   color: #1c2321;
 }
-.submit {
+.submit,
+.submit2 {
   background-color: #1c2321;
   order: 1;
 }
@@ -57,7 +59,8 @@
 }
 
 .back,
-.submit {
+.submit,
+.submit2 {
   border: none;
   background-color: transparent;
   width: unset;
@@ -66,7 +69,8 @@
 }
 
 .back:hover,
-.submit:hover {
+.submit:hover,
+.submit2:hover {
   transition: 0.25s;
   cursor: pointer;
   color: #eef1ef;
@@ -86,14 +90,26 @@
   text-decoration: underline;
 }
 
+.submit2 {
+  border: none;
+  text-align: start;
+  width: fit-content;
+}
+.instruction {
+  font-size: 1.4em;
+}
+
 @media (min-width: 900px) {
   .input,
-  .submit {
+  .submit,
+  .submit2 {
     height: 5vh;
     width: 60%;
     margin-left: 20%;
   }
-
+  .instruction {
+    margin-left: 20%;
+  }
   .btnBox {
     width: 60%;
     margin-left: 20%;
@@ -103,5 +119,8 @@
   .err,
   .title {
     margin-left: 20%;
+  }
+  .submit2 {
+    width: fit-content;
   }
 }
