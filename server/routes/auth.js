@@ -13,5 +13,9 @@ authRouter
 authRouter
   .route("/account/:user_id")
   .delete(validate, authControl.deleteUserControl);
+authRouter
+  .route("/password/forgot")
+  .post(authControl.forgotPasswordControl)
+  .patch(authControl.resetPasswordControl);
 
 module.exports = authRouter;

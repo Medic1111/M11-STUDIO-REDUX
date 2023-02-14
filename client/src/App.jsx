@@ -18,10 +18,13 @@ function App() {
 
   useEffect(() => {
     if (error) {
+      console.log("IM HERE");
+      dispatch(authActions.logout());
       dispatch(uiActions.closeModal());
-      return dispatch(authActions.logout());
+      return () => {};
     }
-    data && dispatch(authActions.auth_in(data.user));
+    if (data) dispatch(authActions.auth_in(data.user));
+    return () => {};
   }, [data, error, dispatch]);
 
   return (
