@@ -58,6 +58,10 @@ const userSchema = new mongoose.Schema(
           ref: "Product",
           require: [true, "A cart needs a product"],
         },
+        time_added: {
+          type: Number,
+          default: Date.now(),
+        },
       },
     ],
     transactions: {
