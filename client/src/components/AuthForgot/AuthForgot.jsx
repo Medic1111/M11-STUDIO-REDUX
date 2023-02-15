@@ -24,7 +24,7 @@ const AuthForgot = ({ setShowPassConfirm }) => {
       <input
         className={classes.submit2}
         type={"submit"}
-        value="send me my recovery code"
+        value="SEND ME MY RECOVERY CODE"
         onClick={handleRequest}
       />
       {isError && <p className={classes.err}>{error.data.message}</p>}
