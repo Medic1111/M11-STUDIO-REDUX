@@ -100,7 +100,7 @@ const AuthIn = ({ setShowForgot }) => {
         />
       )}
       <div className={classes.btnBox}>
-        <input value={"SUBMIT"} className={classes.submit} type={"submit"} />
+        <input className={classes.submit} type={"submit"} />
         <CloseModal text={"BACK"} className={classes.back} />
       </div>
       <p
@@ -116,7 +116,7 @@ const AuthIn = ({ setShowForgot }) => {
       {err && <p className={classes.err}>{errMsg}</p>}
       {authSelector.isLoggin && (
         <button onClick={() => setShowForgot(true)} className={classes.submit2}>
-          Forgot password
+          forgot password
         </button>
       )}
     </form>
