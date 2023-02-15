@@ -65,7 +65,7 @@ const AuthUpdate = ({ setShowForgot, setShowPassConfirm }) => {
       <input
         className={classes.submit2}
         type={"submit"}
-        value="update password"
+        value="UPDATE PASSWORD"
         onClick={handleRequest}
       />
       {isError && <p className={classes.err}>{error.data.message}</p>}
