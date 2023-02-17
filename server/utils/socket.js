@@ -6,7 +6,7 @@ const socketHandler = (socket) => {
   socket.on(
     "JOIN_ROOM",
     handleAsync(async (data) => {
-      if (data.username !== "medic1111" && data.username !== "m11-support") {
+      if (data.username !== "seeduser" && data.username !== "m11-support") {
         await sendEmail({
           email: `${process.env.CUSTOMER_SERVICE}`,
           subject: "SERVICES REQUESTED",
