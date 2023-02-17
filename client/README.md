@@ -1,4 +1,6 @@
-- costumer service something
+- Review ALL inputs for sanitization
+- Split Socket Code on the server
+- ADD TWO NEW ENVS TO PRODUCTION!!!!
   <!--  -->
 - GLITCH MOBILE LOGIN FORM
 - GLITCH MOBILE CHECKOUT FORM
