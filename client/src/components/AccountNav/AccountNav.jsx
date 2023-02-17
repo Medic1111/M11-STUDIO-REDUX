@@ -8,6 +8,7 @@ const AccountNav = ({ socket }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.currentUser.username);
   const [support, setSupport] = useState("");
+
   const showDelete = () => {
     dispatch(uiActions.setShowDeleteAccount());
   };
@@ -51,14 +52,15 @@ const AccountNav = ({ socket }) => {
       </div>
       <span>
         <CartReturn />
+        {user === import.meta.env.VITE_SUPPORT && (
+          <input
+            style={{ width: "85px" }}
+            value={support}
+            type={"text"}
+            onChange={(e) => setSupport(e.target.value)}
+          />
+        )}
       </span>
-      {user === import.meta.env.VITE_SUPPORT && (
-        <input
-          value={support}
-          type={"text"}
-          onChange={(e) => setSupport(e.target.value)}
-        />
-      )}
     </div>
   );
 };
