@@ -8,6 +8,7 @@ const AccountNav = ({ socket }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.currentUser.username);
   const [support, setSupport] = useState("");
+
   const showDelete = () => {
     dispatch(uiActions.setShowDeleteAccount());
   };

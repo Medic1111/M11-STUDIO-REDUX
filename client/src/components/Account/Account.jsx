@@ -13,8 +13,6 @@ const socket = io.connect("https://m11-n5ne.onrender.com", {
   withCredentials: true,
 });
 
-console.log(socket);
-
 const Account = () => {
   const user = useSelector((state) => state.auth.currentUser);
 
