@@ -5,13 +5,15 @@ import AccountNav from "../AccountNav/AccountNav";
 import AccountShowBox from "../AccountShowBox/AccountShowBox";
 import io from "socket.io-client";
 
-const socket = io.connect("http://localhost:3002", {
+const socket = io.connect("https://m11-n5ne.onrender.com", {
   "force new connection": true,
   reconnectionAttempts: "Infinity",
   timeout: 10000,
   transports: ["websocket"], //THIS WAS THE DAMN BUG!!!
   withCredentials: true,
 });
+
+console.log(socket);
 
 const Account = () => {
   const user = useSelector((state) => state.auth.currentUser);
