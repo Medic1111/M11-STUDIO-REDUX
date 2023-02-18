@@ -48,6 +48,8 @@ const AccountSupport = ({ socket }) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           type={"text"}
+          minLength={1}
+          maxLength={3500}
         />
         <button className={classes.btn} onClick={(e) => sendMsgHandler(e)}>
           SEND

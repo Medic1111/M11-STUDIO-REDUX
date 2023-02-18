@@ -1,5 +1,4 @@
 - Review ALL inputs for sanitization
-- Footer arrow
   <!--  -->
 - GLITCH MOBILE LOGIN FORM
 - GLITCH MOBILE CHECKOUT FORM

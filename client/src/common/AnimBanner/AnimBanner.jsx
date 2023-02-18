@@ -1,8 +1,8 @@
 import classes from "./AnimBanner.module.css";
 
-const AnimBanner = ({ orange, black }) => {
+const AnimBanner = ({ orange, black, id }) => {
   return (
-    <article className={classes.article}>
+    <article id={id ? id : null} className={classes.article}>
       <p className={classes.m}>
         m<span className={classes.span1}>{orange}</span>
       </p>
