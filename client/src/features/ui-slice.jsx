@@ -28,8 +28,6 @@ const uiInitialState = {
     .toLowerCase(),
 };
 
-// RERENDER:
-
 export const uiSlice = createSlice({
   name: "UI_SLICE",
   initialState: uiInitialState,

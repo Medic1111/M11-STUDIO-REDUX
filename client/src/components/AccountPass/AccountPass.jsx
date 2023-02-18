@@ -36,6 +36,9 @@ const AccountPass = ({ userId }) => {
           placeholder={"Password"}
           value={currentPassword}
           onChange={(e) => setCurrentPassword(e.target.value)}
+          required
+          minLength={6}
+          maxLength={40}
         />
         <input
           className={classes.input}
@@ -43,6 +46,9 @@ const AccountPass = ({ userId }) => {
           placeholder={"New Password"}
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
+          required
+          minLength={6}
+          maxLength={40}
         />
         <input className={classes.submit} type={"submit"} />
         {error && <p className={classes.err}>{error.data.message}</p>}

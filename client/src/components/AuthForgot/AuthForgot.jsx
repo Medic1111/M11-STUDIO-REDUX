@@ -20,6 +20,9 @@ const AuthForgot = ({ setShowPassConfirm }) => {
         type={"email"}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        minLength={5}
+        maxLength={35}
+        required
       />
       <input
         className={classes.submit2}

@@ -71,6 +71,9 @@ const AuthIn = ({ setShowForgot }) => {
           value={formData.email}
           name="email"
           onChange={inputChangeHandler}
+          minLength={5}
+          maxLength={35}
+          required
         />
       )}
       <input
@@ -80,6 +83,9 @@ const AuthIn = ({ setShowForgot }) => {
         value={formData.username}
         name="username"
         onChange={inputChangeHandler}
+        minLength={5}
+        maxLength={15}
+        required
       />
       <input
         className={classes.input}
@@ -88,6 +94,9 @@ const AuthIn = ({ setShowForgot }) => {
         value={formData.password}
         name="password"
         onChange={inputChangeHandler}
+        minLength={6}
+        maxLength={99}
+        required
       />
       {authSelector.isLoggin || (
         <input

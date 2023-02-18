@@ -1,6 +1,7 @@
 import classes from "./AccountSupport.module.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+
 const AccountSupport = ({ socket }) => {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
@@ -47,6 +48,8 @@ const AccountSupport = ({ socket }) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           type={"text"}
+          minLength={1}
+          maxLength={3500}
         />
         <button className={classes.btn} onClick={(e) => sendMsgHandler(e)}>
           SEND

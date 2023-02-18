@@ -37,6 +37,9 @@ const AuthUpdate = ({ setShowForgot, setShowPassConfirm }) => {
         value={formData.username}
         name="username"
         onChange={onInputChange}
+        minLength={5}
+        maxLength={15}
+        required
       />
       <input
         className={classes.input}
@@ -45,6 +48,9 @@ const AuthUpdate = ({ setShowForgot, setShowPassConfirm }) => {
         value={formData.temp_password}
         name="temp_password"
         onChange={onInputChange}
+        minLength={10}
+        maxLength={40}
+        required
       />
       <input
         className={classes.input}
@@ -53,6 +59,9 @@ const AuthUpdate = ({ setShowForgot, setShowPassConfirm }) => {
         value={formData.newPassword}
         name="newPassword"
         onChange={onInputChange}
+        minLength={6}
+        maxLength={99}
+        required
       />
       <input
         className={classes.input}
@@ -61,6 +70,9 @@ const AuthUpdate = ({ setShowForgot, setShowPassConfirm }) => {
         value={formData.newPasswordConfirm}
         name="newPasswordConfirm"
         onChange={onInputChange}
+        minLength={6}
+        maxLength={99}
+        required
       />
       <input
         className={classes.submit2}
