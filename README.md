@@ -36,7 +36,7 @@ Email notification integration with twilio's sendgrid and nodemailer
 
 State management with React-Redux and Redux-Toolkit
 
-Real-time chat via sockets for Costumer Services
+Real-time chat via sockets for Customer Services
 
 ## Compromises:
 

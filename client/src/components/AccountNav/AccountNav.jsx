@@ -47,7 +47,7 @@ const AccountNav = ({ socket }) => {
           DELETE ACCOUNT
         </button>
         <button onClick={showSupport} className={classes.btn}>
-          CUSTOMER SERVICE
+          COSTUMER SERVICE
         </button>
       </div>
       <span>
