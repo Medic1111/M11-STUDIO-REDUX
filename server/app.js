@@ -11,6 +11,8 @@ const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
 const AppError = require("./utils/app_error");
 require("dotenv").config();
+const cron = require("node-cron");
+
 const app = express();
 
 // MIDDLEWARES:
@@ -56,6 +58,8 @@ const errController = require("./controllers/errController");
 const authRouter = require("./routes/auth");
 const productsRouter = require("./routes/products");
 const cartRouter = require("./routes/cart");
+const { schedule } = require("node-cron");
+const cron_task = require("./utils/cron_job");
 
 // ROUTES
 app.use("/api/v1/auth", authRouter);
@@ -72,6 +76,11 @@ if (process.env.NODE_ENV === "production") {
     next(new AppError(`${req.originalUrl} is not supported`, 404));
   });
 }
+
+// SCHEDULE CRON JOB
+// CLEAR INACTIVE CARTS AND
+// AUTOMATED RESTOCKING
+cron.schedule("0 0 * * *", cron_task);
 
 // ERR MIDDLEWARE/CONTROLLER
 app.use(errController);
