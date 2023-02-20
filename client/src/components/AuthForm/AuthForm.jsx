@@ -10,10 +10,10 @@ const AuthForm = () => {
   const [showForgot, setShowForgot] = useState(false);
   const [showConfirm, setShowPassConfirm] = useState(false);
 
-  const notMobileView = useMediaQuery({ query: "(max-width:700px)" });
+  const mobileView = useMediaQuery({ query: "(max-width:700px)" });
 
   const Wrapper = ({ children }) => {
-    if (notMobileView) {
+    if (mobileView) {
       return <React.Fragment>{children}</React.Fragment>;
     }
     return (
