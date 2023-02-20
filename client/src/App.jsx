@@ -18,7 +18,6 @@ function App() {
 
   useEffect(() => {
     if (error) {
-      console.log("IM HERE");
       dispatch(authActions.logout());
       dispatch(uiActions.closeModal());
       return () => {};

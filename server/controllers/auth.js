@@ -30,15 +30,16 @@ const loginControl = handleAsync(async (req, res, next) => {
   if (!req.body.username || !req.body.password)
     return next(new AppError("Username and password required", 400));
 
-  let user = await User.findOne({ username: req.body.username }).select(
-    "+password"
-  );
+  let user = await User.findOneAndUpdate(
+    { username: req.body.username },
+    { last_login: Date.now() },
+    { new: true, runValidators: true }
+  ).select("+password");
 
   if (!user || !(await user.decrypt(req.body.password, user.password))) {
     return next(new AppError("Incorrect Password or invalid username", 422));
   }
-  user.last_login = Date.now();
-  await user.save();
+
   user.password = null;
 
   res.status(200).json({ user, token: "development_only" });
