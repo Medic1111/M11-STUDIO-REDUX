@@ -4,6 +4,7 @@ import AccountOrders from "../AccountOrders/AccountOrders";
 import AccountNav from "../AccountNav/AccountNav";
 import AccountShowBox from "../AccountShowBox/AccountShowBox";
 import io from "socket.io-client";
+import useAutoLogout from "../../hooks/UseAutoLogout";
 
 const socket = io.connect("https://m11-n5ne.onrender.com", {
   "force new connection": true,
@@ -14,6 +15,7 @@ const socket = io.connect("https://m11-n5ne.onrender.com", {
 });
 
 const Account = () => {
+  useAutoLogout();
   const user = useSelector((state) => state.auth.currentUser);
 
   return (

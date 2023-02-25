@@ -1,8 +1,10 @@
 import classes from "./AccountSupport.module.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import useAutoLogout from "../../hooks/UseAutoLogout";
 
 const AccountSupport = ({ socket }) => {
+  useAutoLogout();
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
   const user = useSelector((state) => state.auth.currentUser.username);

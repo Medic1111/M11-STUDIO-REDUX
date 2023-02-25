@@ -4,8 +4,10 @@ import { uiActions } from "../../features/ui-slice";
 import { authActions } from "../../features/auth-slice";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import useAutoLogout from "../../hooks/UseAutoLogout";
 
 const AccountDel = ({ userId }) => {
+  useAutoLogout();
   const [deleteUser, { data, error }] = useDeleteMutation();
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
