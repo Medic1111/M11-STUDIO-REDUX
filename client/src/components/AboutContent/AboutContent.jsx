@@ -1,5 +1,6 @@
 import classes from "./AboutContent.module.css";
 import GalOne from "../../assets/gal1.jpg";
+import React from "react";
 
 const AboutContent = () => {
   return (
@@ -13,7 +14,9 @@ const AboutContent = () => {
             <p className={classes.p}>305-111-6363</p>
           </div>
           <div className={classes.boxOne}>
-            <strong className={classes.strong}>February</strong>
+            <strong className={classes.strong}>
+              {new Date().toLocaleString("default", { month: "long" })}
+            </strong>
             <p className={classes.p}>Caçique has taught...</p>
             <p className={classes.p}>6 ltd. edition</p>
           </div>
@@ -46,4 +49,4 @@ const AboutContent = () => {
   );
 };
 
-export default AboutContent;
+export default React.memo(AboutContent);

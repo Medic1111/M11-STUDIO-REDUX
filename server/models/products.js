@@ -8,7 +8,7 @@ const productSchema = new mongoose.Schema(
       trim: true,
       minLength: [2, "Title must be at least 5 chars long"],
       maxLength: [65, "Title must be at most 15 chars long"],
-      unique: [true, "Title already in use, choose a different one"],
+      // unique: [true, "Title already in use, choose a different one"],
     },
     price: {
       type: Number,

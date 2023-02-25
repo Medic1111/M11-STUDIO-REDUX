@@ -3,6 +3,7 @@ import OtherExpoTxt from "../OtherExpoTxt/OtherExpoTxt";
 import OtherExpoReturn from "../OtherExpoReturn/OtherExpoReturn";
 import OtherExpoList from "../OtherExpoList/OtherExpoList";
 import Scroll from "../../common/Scroll/Scroll";
+
 const OtherExpo = () => {
   return (
     <Scroll>
