@@ -1,5 +1,4 @@
 - MARQUEE
-- FIX AUTO LOGOUT
 - Error Feedback investigate
 - Admin page brainstorm
 - Do something better for TELE

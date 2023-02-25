@@ -4,8 +4,10 @@ import { uiActions } from "../../features/ui-slice";
 import { authActions } from "../../features/auth-slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import useAutoLogout from "../../hooks/UseAutoLogout";
 
 const AccountPass = ({ userId }) => {
+  useAutoLogout();
   const [changePass, { data, error }] = useChangePasswordMutation();
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
