@@ -4,8 +4,9 @@ import { Fade } from "react-awesome-reveal";
 import { useSelector } from "react-redux";
 import AccountDel from "../AccountDel/AccountDel";
 import AccountPass from "../AccountPass/AccountPass";
+import AccountSupport from "../AccountSupport/AccountSupport";
 
-const AccountShowBox = () => {
+const AccountShowBox = ({ socket }) => {
   const uiSelector = useSelector((state) => state.ui);
   const userId = useSelector((state) => state.auth.currentUser.id);
   return (
@@ -25,7 +26,7 @@ const AccountShowBox = () => {
           <AccountPass userId={userId} />
         </Fade>
       )}
-      {uiSelector.showSupport && <p>TEST SHOW SUPPORT CONTACT</p>}
+      {uiSelector.showSupport && <AccountSupport socket={socket} />}
     </div>
   );
 };

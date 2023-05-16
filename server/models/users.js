@@ -65,6 +65,11 @@ const userSchema = new mongoose.Schema(
       default: [],
       select: false,
     },
+    last_login: {
+      type: Number,
+      default: Date.now(),
+      select: false,
+    },
   },
   {
     toJSON: { virtuals: true },

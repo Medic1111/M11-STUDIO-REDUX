@@ -11,6 +11,7 @@ const Hero = () => {
       <AnimBanner
         orange={`- ${issue} - expo - is - on -`}
         black={`- absolute - fire - don't - miss - out -`}
+        id={"hero"}
       />
       <LogoWrapper>
         <Logo />

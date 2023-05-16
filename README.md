@@ -36,6 +36,8 @@ Email notification integration with twilio's sendgrid and nodemailer
 
 State management with React-Redux and Redux-Toolkit
 
+Real-time chat via sockets for Customer Services
+
 ## Compromises:
 
 - No focus on mobile UI although current MVP is mobile-friendly
@@ -58,11 +60,14 @@ State management with React-Redux and Redux-Toolkit
   - Twilio's Sendgrid
   - React Redux
   - Redux Toolkit
+  - Socket.io
+  - Socket.io-client
 
 ## What's next
 
-- Feedback for item added to cart
-- Pagination and filtering
+- Cart Times
+- Auto Clear Inactive Cart
+- Auto Restock products from inactive carts
 
 ## Running it
 

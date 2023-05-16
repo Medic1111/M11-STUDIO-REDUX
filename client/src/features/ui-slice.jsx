@@ -15,6 +15,7 @@ const uiInitialState = {
   showChangePassword: false,
   showDeleteAccount: false,
   showSupport: false,
+  roomId: null,
   issueToShow: new Date()
     .toLocaleString("default", {
       month: "long",
@@ -27,14 +28,15 @@ const uiInitialState = {
     .toLowerCase(),
 };
 
-// RERENDER:
-
 export const uiSlice = createSlice({
   name: "UI_SLICE",
   initialState: uiInitialState,
   reducers: {
     closeModal: (state, action) => {
       return (state = uiInitialState);
+    },
+    setRoomId: (state, action) => {
+      state.roomId = action.payload;
     },
 
     setIsLoading: (state, action) => {

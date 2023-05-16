@@ -4,8 +4,10 @@ import { uiActions } from "../../features/ui-slice";
 import { authActions } from "../../features/auth-slice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import useAutoLogout from "../../hooks/UseAutoLogout";
 
 const AccountPass = ({ userId }) => {
+  useAutoLogout();
   const [changePass, { data, error }] = useChangePasswordMutation();
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -36,6 +38,9 @@ const AccountPass = ({ userId }) => {
           placeholder={"Password"}
           value={currentPassword}
           onChange={(e) => setCurrentPassword(e.target.value)}
+          required
+          minLength={6}
+          maxLength={40}
         />
         <input
           className={classes.input}
@@ -43,6 +48,9 @@ const AccountPass = ({ userId }) => {
           placeholder={"New Password"}
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
+          required
+          minLength={6}
+          maxLength={40}
         />
         <input className={classes.submit} type={"submit"} />
         {error && <p className={classes.err}>{error.data.message}</p>}

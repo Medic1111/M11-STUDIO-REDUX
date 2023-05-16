@@ -1,0 +1,79 @@
+.form {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2vh 2vw;
+}
+
+.ul {
+  padding: 2vh 0;
+  height: 90%;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: scroll;
+  gap: 2.5vh;
+  margin-bottom: 2%;
+}
+
+.liUser,
+.liSupport {
+  height: auto;
+  width: auto;
+  background-color: #a9b4c225;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em 1em;
+  text-transform: capitalize;
+  border-radius: 0 10px 0 0;
+  max-width: 80%;
+}
+
+.p {
+  font-size: 1.3em;
+  color: #1c2321be;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.liSupport {
+  align-self: flex-end;
+  /* border-radius: 5px 0 0 0; */
+  background-color: rgba(255, 99, 71, 0.083);
+}
+.inputBox {
+  height: 5%;
+  min-height: 5%;
+  width: 100%;
+}
+.input {
+  width: 80%;
+  height: 100%;
+  outline: none;
+  border: transparent;
+  padding-left: 0.25em;
+  /* TEST */
+  font-size: 16px;
+}
+.btn {
+  width: 20%;
+  height: 100%;
+  border-left: none;
+  border: transparent;
+  background-color: tomato;
+  color: #f2f2f2;
+  border-radius: 0 10px 0 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: 0.25s;
+  background-color: #1c2321;
+}

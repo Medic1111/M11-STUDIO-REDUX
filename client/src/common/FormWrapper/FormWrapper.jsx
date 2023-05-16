@@ -6,7 +6,10 @@ const FormWrapper = ({ children }) => {
   const dispatch = useDispatch();
 
   const handleCloseModal = (e) => {
-    if (e.target.className === "_article_o9ln3_1") {
+    if (
+      e.target.className === "_article_o9ln3_1" ||
+      e.target.className === "_article_1pwg7_1"
+    ) {
       return dispatch(uiActions.closeModal());
     }
     return;

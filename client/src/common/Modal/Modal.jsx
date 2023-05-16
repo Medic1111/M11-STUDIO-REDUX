@@ -9,6 +9,7 @@ import Account from "../../components/Account/Account";
 
 const Modal = () => {
   const uiSelector = useSelector((state) => state.ui);
+
   return (
     <Portal>
       {uiSelector.showArtDetail && <ArtDetail />}

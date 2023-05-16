@@ -6,7 +6,7 @@ const PayConfirm = ({ setShowConfirm }) => {
   const dispatch = useDispatch();
   return (
     <div className={classes.confirm}>
-      <p>Payment successful</p>
+      <p className={classes.p}>Payment successful</p>
       <button
         className={classes.btn}
         onClick={() => {
