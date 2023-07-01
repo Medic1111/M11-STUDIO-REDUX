@@ -20,9 +20,9 @@ const AuthIn = ({ setShowForgot }) => {
   const [errMsg, setErrMsg] = useState("");
 
   const [formData, setFormData] = useState({
-    username: "",
+    username: "medic1111",
     email: "",
-    password: "",
+    password: "111111",
     passwordConfirm: "",
   });
 
